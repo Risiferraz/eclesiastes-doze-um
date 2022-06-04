@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="tela-inicial">
+            <header>QUEBRA CABEÇA</header>
+            <img id="fantasma" src="/imagens/pano-de-fundo.jpg">
+            <button onclick="clicar()">START</button>
+            <h2>Orientações :</h2>
+            <p>Clique no botão "START" para iniciar.<br>
+                Monte as peças de acordo com a ordem das palavras;
+                de cima para baixo e da esquerda para a direita.</p>
+        </div>
+        <div id="jogo-em-andamento">
+            <div class="malha" draggable="true">
+                <div class="dropzone" id="Q1"></div>
+                <div class="dropzone" id="Q2"></div>
+                <div class="dropzone" id="Q3"></div>
+                <div class="dropzone" id="Q4"></div>
+                <div class="dropzone" id="Q5"></div>
+                <!-- <div class="dropzone" id="Q6"></div>  ELIMINADA -->
+                <div class="dropzone" id="Q7"></div>
+                <div class="dropzone" id="Q8"></div>
+                <div class="dropzone" id="Q9"></div>
+                <div class="dropzone" id="Q10"></div>
+                <div class="dropzone" id="Q11"></div>
+                <div class="dropzone" id="Q12"></div>
+                <div class="dropzone" id="Q13"></div>
+                <div class="dropzone" id="Q14"></div>
+                <div class="dropzone" id="Q15"></div>
+                <div class="dropzone" id="Q16"></div>
+                <div class="dropzone" id="Q17"></div>
+                <div class="dropzone" id="Q18"></div>
+                <div class="dropzone" id="Q19"></div>
+                <div class="dropzone" id="Q20"></div>
+                <div class="dropzone" id="Q21"></div>
+                <div class="dropzone" id="Q22"></div>
+                <div class="dropzone" id="Q23"></div>
+                <div class="dropzone" id="Q24"></div>
+                <div class="dropzone" id="Q25"></div>
+                <div class="dropzone" id="Q26"></div>
+                <div class="dropzone" id="Q27"></div>
+            </div>
+            <div class="containerpeças">
+                <img class="card" id="lembra-te" draggable="true" src="/imagens/lembra-te.jpg">
+                <img class="card" id="tambem" draggable="true" src="/imagens/também.jpg">
+                <img class="card" id="doteu" draggable="true" src="/imagens/do teu.jpg">
+                <img class="card" id="criador" draggable="true" src="/imagens/criador.jpg">
+                <img class="card" id="nos dias" draggable="true" src="/imagens/nos.jpg">
+                <img class="card" id="datua" draggable="true" src="/imagens/da tua.jpg">
+                <img class="card" id="mocidade" draggable="true" src="/imagens/mocidade.jpg">
+                <img class="card" id="antes" draggable="true" src="/imagens/antes.jpg">
+                <img class="card" id="que" draggable="true" src="/imagens/que.jpg">
+                <img class="card" id="venham" draggable="true" src="/imagens/venham.jpg">
+                <img class="card" id="os" draggable="true" src="/imagens/os.jpg">
+                <img class="card" id="maus" draggable="true" src="/imagens/maus.jpg">
+                <img class="card" id="dias2" draggable="true" src="/imagens/dias2.jpg">
+                <img class="card" id="e" draggable="true" src="/imagens/e.jpg">
+                <img class="card" id="cheguem" draggable="true" src="/imagens/cheguem.jpg">
+                <img class="card" id="os2" draggable="true" src="/imagens/os2.jpg">
+                <img class="card" id="anos" draggable="true" src="/imagens/anos.jpg">
+                <img class="card" id="dos" draggable="true" src="/imagens/dos.jpg">
+                <img class="card" id="quais" draggable="true" src="/imagens/quais.jpg">
+                <img class="card" id="venhas" draggable="true" src="/imagens/venhas.jpg">
+                <img class="card" id="dizer" draggable="true" src="/imagens/dizer.jpg">
+                <img class="card" id="não" draggable="true" src="/imagens/não.jpg">
+                <img class="card" id="tenho" draggable="true" src="/imagens/tenho.jpg">
+                <img class="card" id="neles" draggable="true" src="/imagens/neles.jpg">
+                <img class="card" id="contentamento" draggable="true" src="/imagens/contentamento.jpg">
+                <img class="card" id="eclesiastes" draggable="true" src="/imagens/Eclesiastes 12.1.jpg">
+            </div>
+            <div id="Marcatempo">
+                <h5>TEMPO:</h5>
+                <h2 id="cronometro">00:00</h2>
+            </div>
+        </div>
+
+        <script src="cronometro.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
