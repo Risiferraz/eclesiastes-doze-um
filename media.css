@@ -1,0 +1,93 @@
+@media (max-width:425px) {
+
+    /* regras para uma largura máxima de 425px */
+    .container {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+    #capa {
+        width: 100vw;
+        display: block;
+    }
+
+    #orientacoes {
+        padding: 2%;
+    }
+
+    #avancar {
+        display: block;
+    }
+
+    #btn {
+        width: 160px;
+        height: 180px;
+        transform: translate(-50%, -10%);
+    }
+
+    #modelo {
+        width: 100vw;
+    }
+
+    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
+
+    #tela-inicial {
+        width: 100vw;
+    }
+
+    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+
+    #jogo-em-andamento {
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 100vw;
+        grid-template-rows: 55vh 25% auto;
+    }
+
+    .malha {
+        grid-area: 1 / 1 / span 1 / span 1;
+        width: 100vw;
+        height: 87%;
+        background-size: contain;
+        grid-template-columns: repeat(17, 1fr);
+        grid-template-rows: repeat(18, 1fr);
+    }
+
+    #containerpecas {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    #Marcatempo {
+        padding-bottom: 10%;
+        grid-area: 3 / 1 / span 1 / span 1;
+    }
+}
+
+@media (max-height: 800px) {
+
+    /* regras para uma altura máxima de 800px */
+    #orientacoes {
+        padding: 2%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 384px) {
+
+    /* regras para uma largura máxima de 360px */
+    .malha {
+        grid-area: 1 / 1 / span 1 / span 1;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 360px) {
+
+    /* regras para uma largura máxima de 360px */
+    .malha {
+        grid-area: 1 / 1 / span 1 / span 1;
+        width: 100vw;
+    }
+}

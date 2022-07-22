@@ -1,0 +1,337 @@
+body {
+    background-color: rgb(182, 114, 13);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: rgb(33, 33, 33);
+    margin: 0 auto;
+    width: 95%;
+    max-width: 200mm;
+    height: 243mm;
+}
+/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+
+#capa {
+    display: grid;
+    width: 95%;
+    max-width: 200mm;
+    height: 243mm;
+    box-sizing: border-box;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 162mm 81mm;
+    padding-top: 2%;
+    margin: 0 auto;
+}
+#titulo {
+    grid-area: 1 / 1 / span 1 / span 2;
+}
+#logo {
+    width: 100%;
+    height: 100%;
+}
+#orientacoes {
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+#avancar {
+    grid-area: 2 / 2 / span 1 / span 1;
+    position: relative;
+}
+h2 {
+    color: antiquewhite;
+    margin-left: 4%;
+    font-size: 25px;
+}
+h5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    margin-left: 12%;
+}
+p {
+    color: antiquewhite;
+    margin-left: 4%;
+    line-height: 1.4em;
+    font-size: 1.4em;
+    font-family: "Palatino Linotype", Verdana, sans-serif;
+}
+#clique {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#btn {
+    width: 160px;
+    height: 180px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 85px;
+    border-color: rgb(33, 33, 33);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#btn:hover {
+    cursor: pointer;
+}
+
+/* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
+
+#tela-inicial {
+    display: none;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 200mm;
+    height: 243mm;
+}
+#modelo {
+    display: block;
+    width: 95%;
+    max-width: 200mm;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+}
+#start {
+    background: rgb(182, 114, 13);
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    border-radius: 8px;
+    border: outset 5px rgb(252, 237, 177);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -600%) ;
+}
+#start:hover {
+    background-color: rgb(255, 215, 114);
+    border: outset 6px rgb(255, 254, 227);
+    cursor: pointer;
+}
+
+/* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+
+#jogo-em-andamento {
+    display: none;
+    background-color: rgb(33, 33, 33);
+    margin: 0 auto;
+    width: 95%;
+    max-width: 200mm;
+    height: 243mm;
+    box-sizing: border-box;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 200mm 43mm;
+}
+.malha {
+    grid-area: 1 / 1 / span 1 / span 2;
+    background-image: url("/imagens/pano-de-fundo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    margin: 2% auto;
+    display: grid;
+    width: 95%;
+    max-width: 680px;
+    height: 95%;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+}
+
+#Q1 {
+    grid-area: 1 / 1 / span 9 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 4px solid rgb(131, 131, 131);
+}
+
+#Q2 {
+    grid-area: 1 / 4 / span 2 / span 5;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q3 {
+    grid-area: 1 / 9 / span 2 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q4 {
+    grid-area: 1 / 12 / span 2 / span 6;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q5 {
+    grid-area: 3 / 4 / span 3 / span 4;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+/* #Q6{   !!!!ELIMINADA!!!!!
+    grid-area: 3 / 6 / span 3 / span 2;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120,120,120,0.5);
+} */
+#Q7 {
+    grid-area: 3 / 8 / span 3 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q8 {
+    grid-area: 3 / 11 / span 3 / span 7;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q9 {
+    grid-area: 6 / 4 / span 4 / span 2;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q10 {
+    grid-area: 6 / 6 / span 2 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q11 {
+    grid-area: 6 / 9 / span 3 / span 6;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q12 {
+    grid-area: 6 / 15 / span 3 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q13 {
+    grid-area: 10 / 1 / span 2 / span 5;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q14 {
+    grid-area: 8 / 6 / span 4 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q15 {
+    grid-area: 9 / 9 / span 3 / span 2;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q16 {
+    grid-area: 9 / 11 / span 3 / span 7;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q17 {
+    grid-area: 12 / 1 / span 3 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q18 {
+    grid-area: 12 / 4 / span 2 / span 4;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q19 {
+    grid-area: 12 / 8 / span 3 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q20 {
+    grid-area: 12 / 11 / span 3 / span 2;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q21 {
+    grid-area: 12 / 13 / span 3 / span 5;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q22 {
+    grid-area: 15 / 1 / span 4 / span 3;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q23 {
+    grid-area: 14 / 4 / span 2 / span 4;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q24 {
+    grid-area: 16 / 4 / span 3 / span 5;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q25 {
+    grid-area: 15 / 9 / span 4 / span 2;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q26 {
+    grid-area: 15 / 11 / span 2 / span 7;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+
+#Q27 {
+    grid-area: 17 / 11 / span 2 / span 7;
+    background-color: rgb(130, 130, 130);
+    border: 2px solid rgb(120, 120, 120, 0.5);
+}
+.dropzone {
+    opacity: 0.6;
+}
+#containerpecas{
+    grid-area: 2 / 1 / span 1 / span 1; 
+}
+.card {
+    position: absolute;
+    /* margin-left: 3%;; */
+}
+.card:hover {
+    transform: scale(110%);
+    cursor: pointer;
+}
+#lembra-te {
+    /* transform: rotate(90deg); */
+    position: absolute;
+}
+
+#Marcatempo {
+    background-color: rgb(182, 114, 13);
+    width: 90px;
+    height: 80px;
+    border-radius: 8px;
+    border: solid 4px rgb(156, 147, 147);
+    position: relative;
+    padding-bottom: 10%;
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#cronometro {
+    font-size: 30px;
+    font-family: Impact, Verdana Bold, 'Arial Narrow', Arial;
+    text-align: center;
+    line-height: 0;
+}
