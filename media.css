@@ -1,39 +1,36 @@
-@media (max-width:425px) {
+/* regras para uma largura máxima de 428px */
 
-    /* regras para uma largura máxima de 425px */
+@media (max-width:428px) {
     .container {
         width: 100vw;
         height: 100vh;
+        max-width: 100vw;
         margin: 0;
     }
 
     /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
     #capa {
         width: 100vw;
+        height: 100vh;
         display: block;
-    }
-
-    #orientacoes {
-        padding: 2%;
+        position: relative;
     }
 
     #avancar {
-        display: block;
-    }
-
-    #btn {
-        width: 160px;
-        height: 180px;
-        transform: translate(-50%, -10%);
-    }
-
-    #modelo {
-        width: 100vw;
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        margin-left: -48px;
     }
 
     /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
 
     #tela-inicial {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #modelo {
         width: 100vw;
     }
 
@@ -65,29 +62,115 @@
     }
 }
 
-@media (max-height: 800px) {
+/* ____________________________________________________________________________ */
+/* regras para orientation landscape*/
 
-    /* regras para uma altura máxima de 800px */
-    #orientacoes {
-        padding: 2%;
-        font-size: 12px;
-    }
-}
+@media (orientation: landscape) {
 
-@media (max-width: 384px) {
-
-    /* regras para uma largura máxima de 360px */
-    .malha {
-        grid-area: 1 / 1 / span 1 / span 1;
+    .container {
         width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+    }
+
+    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+    #capa {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        padding: 0;
+        position: relative;
+    }
+
+    #titulo {
+        grid-area: 1 / 1 / span 3 / span 1;
+    }
+
+    #orientacoes {
+        grid-area: 1 / 2 / span 1 / span 2;
+    }
+
+    #avancar {
+        grid-area: 2 / 2 / span 2 / span 2;
+    }
+
+    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
+
+    #tela-inicial {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #modelo {
+        width: 50%;
+        height: 100vh;
+        margin-left: 10px;
+        margin-right: auto;
+        padding-top: 0;
+    }
+
+    #start {
+        top: 50%;
+        right: 80%;
+    }
+
+    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+    #jogo-em-andamento {
+        grid-template-columns: 3fr 1fr auto;
+        grid-template-rows: 100vh;
     }
 }
 
+/* ____________________________________________________________________________ */
+
+/* regras para uma largura máxima de 360px */
 @media (max-width: 360px) {
 
-    /* regras para uma largura máxima de 360px */
+    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
+    #start {
+        position: relative;
+        top: 75%;
+        left: 50%;
+    }
+
+    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
     .malha {
         grid-area: 1 / 1 / span 1 / span 1;
         width: 100vw;
+    }
+}
+
+/* __________________________________________ */
+/* regras para uma altura mínima de 1000px */
+/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+/* afeta apenas o Kindle Fire HDX Linus e o iPad*/
+@media (min-height: 1000px) {
+    #avancar {
+        position: relative;
+        top: -10%;
+        left: -12%;
+    }
+}
+
+/* __________________________________________ */
+/* regras para uma altura máxima de 812px */
+/*apenas afeta o iPhone SE 2nd gen iOS 14.6*/
+/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+@media (max-height: 812px) {
+    #avancar {
+        position: absolute;
+        top: 80%;
+        left: 35%;
+    }
+
+    #orientacoes {
+        padding: 0 6%;
+    }
+
+    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
+    #start {
+        position: relative;
+        top: 75%;
+        left: 50%;
     }
 }

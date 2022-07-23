@@ -7,51 +7,55 @@ body {
     background-color: rgb(33, 33, 33);
     margin: 0 auto;
     width: 95%;
-    max-width: 200mm;
-    height: 243mm;
+    max-width: 450px;
+    height: 800px;
 }
 /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
 
 #capa {
     display: grid;
     width: 95%;
-    max-width: 200mm;
-    height: 243mm;
+    max-width: 450px;
+    height: 800px;
     box-sizing: border-box;
-    grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: 162mm 81mm;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
     padding-top: 2%;
     margin: 0 auto;
 }
 #titulo {
-    grid-area: 1 / 1 / span 1 / span 2;
+    grid-area: 1 / 1 / span 1 / span 3;
 }
 #logo {
     width: 100%;
     height: 100%;
 }
 #orientacoes {
-    grid-area: 2 / 1 / span 1 / span 1;
+    grid-area: 2 / 1 / span 1 / span 3;
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 6%;
 }
 #avancar {
-    grid-area: 2 / 2 / span 1 / span 1;
+    grid-area: 3 / 1 / span 1 / span 3;
     position: relative;
 }
 h2 {
     color: antiquewhite;
     margin-left: 4%;
-    font-size: 25px;
+    font-size: 1.2em;
 }
 h5 {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    font-size: 12pt;
+    font-size: 10pt;
     margin-left: 12%;
+    line-height: 10px;
 }
 p {
     color: antiquewhite;
     margin-left: 4%;
-    line-height: 1.4em;
-    font-size: 1.4em;
+    line-height: 1.2em;
+    font-size: 1.1em;
     font-family: "Palatino Linotype", Verdana, sans-serif;
 }
 #clique {
@@ -60,15 +64,13 @@ p {
     object-fit: cover;
 }
 #btn {
-    width: 160px;
-    height: 180px;
+    width: 96px;
+    height: 108px;
     background-color: rgb(33, 33, 33);
     border-radius: 85px;
     border-color: rgb(33, 33, 33);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 40%;
 }
 #btn:hover {
     cursor: pointer;
@@ -86,7 +88,6 @@ p {
 #modelo {
     display: block;
     width: 95%;
-    max-width: 200mm;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5%;
@@ -117,18 +118,18 @@ p {
     background-color: rgb(33, 33, 33);
     margin: 0 auto;
     width: 95%;
-    max-width: 200mm;
-    height: 243mm;
+    max-width: 450px;
+    height: 800px;
     box-sizing: border-box;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 200mm 43mm;
+    grid-template-columns: auto;
+    grid-template-rows: 3fr 1.5fr 1fr;
 }
 .malha {
     grid-area: 1 / 1 / span 1 / span 2;
     background-image: url("/imagens/pano-de-fundo.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100% 100%;
     background-position: center;
     margin: 2% auto;
     display: grid;
@@ -307,7 +308,8 @@ p {
 }
 .card {
     position: absolute;
-    /* margin-left: 3%;; */
+    margin-top: 5%;
+    margin-left: 3%;
 }
 .card:hover {
     transform: scale(110%);
@@ -321,17 +323,18 @@ p {
 #Marcatempo {
     background-color: rgb(182, 114, 13);
     width: 90px;
-    height: 80px;
+    height: 90px;
     border-radius: 8px;
     border: solid 4px rgb(156, 147, 147);
     position: relative;
-    padding-bottom: 10%;
-    grid-area: 2 / 2 / span 1 / span 1;
+    left: 60%;
+    padding-bottom: 1%;
+    grid-area: 3 / 1 / span 1 / span 1;
 }
 
 #cronometro {
     font-size: 30px;
     font-family: Impact, Verdana Bold, 'Arial Narrow', Arial;
     text-align: center;
-    line-height: 0;
+    line-height: 10px;
 }
