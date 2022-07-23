@@ -8,15 +8,31 @@ function passar() {
   document.getElementById("capa").style.display = "none"
   document.getElementById("tela-inicial").style.display = "block"
 }
+const listaDeCards= document.getElementsByClassName('card');
+const listaDeCardsNaoSorteados = listaDeCards
 //*******FUNÇÕES QUE ACONTECEM AO CLICAR NO "START"*******/
 function clicar() {
   document.getElementById("tela-inicial").style.display = "none"
   document.getElementById("jogo-em-andamento").style.display = "grid"
   cronometro.iniciaCronometro()
-  card.embaralhaCards()
+  sorteiaCardDaVez()
+}
+function sorteiaCardDaVez() {
+  const numeroAleatorio = Math.floor(Math.random() * listaDeCardsNaoSorteados.length)
+  listaDeCardsNaoSorteados[numeroAleatorio].style.display= "inline";
+  const index = listaDeCardsNaoSorteados.indexOf(numeroAleatorio);
+  if (index > -1) { // only splice array when item is found
+    listaDeCardsNaoSorteados.splice(index, 1); // 2nd parameter means remove one item only
+  }
+
 }
 //*******FUNÇÕES QUE ACONTECEM NO DRAG AND DROP"*******/
 let dragged = null;
+
+document.addEventListener("dragend", event => {
+  dragged = event.target;
+sorteiaCardDaVez()
+});
 
 document.addEventListener("dragstart", event => {
   dragged = event.target;

@@ -123,8 +123,22 @@
 
 /* ____________________________________________________________________________ */
 
-/* regras para uma largura máxima de 360px */
-@media (max-width: 360px) {
+/* regras para uma largura máxima de 375px */
+@media (max-width: 375px) {
+
+    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+    #capa {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: relative;
+    }
+
+    #avancar {
+        position: absolute;
+        left: 50%;
+        margin-left: 8px;
+    }
 
     /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
     #start {
@@ -146,9 +160,10 @@
 /* afeta apenas o Kindle Fire HDX Linus e o iPad*/
 @media (min-height: 1000px) {
     #avancar {
-        position: relative;
-        top: -10%;
-        left: -12%;
+        position: absolute;
+        bottom: 45%;
+        left: 50%;
+        margin-left: -48px;
     }
 }
 

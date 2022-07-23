@@ -301,7 +301,7 @@ p {
     border: 2px solid rgb(120, 120, 120, 0.5);
 }
 .dropzone {
-    opacity: 0.6;
+    opacity: 1;
 }
 #containerpecas{
     grid-area: 2 / 1 / span 1 / span 1; 
@@ -310,6 +310,7 @@ p {
     position: absolute;
     margin-top: 5%;
     margin-left: 3%;
+    display: none;
 }
 .card:hover {
     transform: scale(110%);
