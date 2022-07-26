@@ -4,7 +4,6 @@
     .container {
         width: 100vw;
         height: 100vh;
-        max-width: 100vw;
         margin: 0;
     }
 
@@ -12,13 +11,25 @@
     #capa {
         width: 100vw;
         height: 100vh;
-        display: block;
         position: relative;
+        grid-template-columns: 100vw;
+        grid-template-rows: 2fr 1.5fr 1fr;
+    }
+
+    #titulo {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    #orientacoes {
+        grid-area: 2 / 1 / span 1 / span 1;
     }
 
     #avancar {
+        grid-area: 3 / 1 / span 1 / span 1;
+    }
+
+    #btn {
         position: absolute;
-        bottom: 30%;
         left: 50%;
         margin-left: -48px;
     }
@@ -41,36 +52,101 @@
         height: 100vh;
         grid-template-columns: 100vw;
         grid-template-rows: 55vh 25% auto;
+        position: relative;
     }
 
     .malha {
-        grid-area: 1 / 1 / span 1 / span 1;
         width: 100vw;
         height: 87%;
         background-size: contain;
-        grid-template-columns: repeat(17, 1fr);
-        grid-template-rows: repeat(18, 1fr);
     }
 
-    #containerpecas {
-        grid-area: 2 / 1 / span 1 / span 1;
+    .card {
+        margin-top: 13%;
+        margin-left: 13%;
     }
 
     #Marcatempo {
-        padding-bottom: 10%;
-        grid-area: 3 / 1 / span 1 / span 1;
+        left: 50%;
+    }
+}
+
+/* ____________________________________________________________________________ */
+
+/* regras para uma altura mínima de 1000px */
+/* afeta apenas o Kindle Fire HDX Linus e o iPad*/
+/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+@media (min-height: 1000px) {
+    #avancar {
+        position: relative;
+    }
+
+    #btn {
+        position: absolute;
+        left: 50%;
+        margin-left: -48px;
+    }
+}
+
+/* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+#jogo-em-andamento {
+    position: relative;
+}
+
+.malha {
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+.card {
+    margin-top: 13%;
+    margin-left: 13%;
+}
+
+#Marcatempo {
+    left: 50%;
+}
+
+/* _____________________________________________________________________________________ */
+/* regras para uma altura máxima de 667px */
+/*apenas afeta o iPhone SE 2nd gen iOS 14.6*/
+/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+@media (max-height: 667px) {
+    .malha {
+        height: 100%;
+        background-size: 100% 100%;
+    }
+
+    #avancar {
+        position: relative;
+    }
+
+    #btn {
+        position: absolute;
+        left: 50%;
+        margin-left: -48px;
+    }
+
+    #orientacoes {
+        padding: 0 6%;
+    }
+
+    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+    #Marcatempo {
+        left: 50%;
     }
 }
 
 /* ____________________________________________________________________________ */
 /* regras para orientation landscape*/
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 950px) {
 
     .container {
         width: 100vw;
         height: 100vh;
         max-width: 100vw;
+        max-height: 100vh;
     }
 
     /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
@@ -79,113 +155,87 @@
         height: 100vh;
         max-width: 100vw;
         padding: 0;
+        margin: 0;
         position: relative;
+        grid-template-columns: 2fr 1.5fr;
+        grid-template-rows: 2fr 1fr;
     }
 
     #titulo {
-        grid-area: 1 / 1 / span 3 / span 1;
+        grid-area: 1 / 1 / span 2 / span 1;
     }
 
     #orientacoes {
-        grid-area: 1 / 2 / span 1 / span 2;
+        grid-area: 1 / 2 / span 1 / span 1;
     }
 
     #avancar {
-        grid-area: 2 / 2 / span 2 / span 2;
+        grid-area: 2 / 2 / span 1 / span 1;
     }
 
     /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
 
     #tela-inicial {
+        display: grid;
         width: 100vw;
+        max-width: 100vw;
         height: 100vh;
+        margin: 0;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
     }
 
     #modelo {
         width: 50%;
         height: 100vh;
-        margin-left: 10px;
-        margin-right: auto;
+        margin-left: 0;
         padding-top: 0;
+        grid-area: 1 / 1 / span 1 / span 1;
     }
 
     #start {
+        position: absolute;
+        grid-area: 1 / 2 / span 1 / span 1;
         top: 50%;
-        right: 80%;
+        left: 75%;
     }
 
     /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
     #jogo-em-andamento {
-        grid-template-columns: 3fr 1fr auto;
-        grid-template-rows: 100vh;
-    }
-}
-
-/* ____________________________________________________________________________ */
-
-/* regras para uma largura máxima de 375px */
-@media (max-width: 375px) {
-
-    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
-    #capa {
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 1fr;
+        margin: 0;
         width: 100vw;
+        max-width: 100vw;
         height: 100vh;
-        display: block;
-        position: relative;
     }
 
-    #avancar {
-        position: absolute;
-        left: 50%;
-        margin-left: 8px;
-    }
-
-    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
-    #start {
-        position: relative;
-        top: 75%;
-        left: 50%;
-    }
-
-    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
     .malha {
-        grid-area: 1 / 1 / span 1 / span 1;
-        width: 100vw;
+        grid-area: 1 / 1 / span 2 / span 1;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
     }
-}
 
-/* __________________________________________ */
-/* regras para uma altura mínima de 1000px */
-/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
-/* afeta apenas o Kindle Fire HDX Linus e o iPad*/
-@media (min-height: 1000px) {
-    #avancar {
+    #containerpecas {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+
+    .card {
+        margin-top: 5%;
+        margin-left: 13%;
+    }
+
+    #Marcatempo {
+        /* width: 90px;
+        height: 80px;
         position: absolute;
-        bottom: 45%;
-        left: 50%;
-        margin-left: -48px;
-    }
-}
-
-/* __________________________________________ */
-/* regras para uma altura máxima de 812px */
-/*apenas afeta o iPhone SE 2nd gen iOS 14.6*/
-/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
-@media (max-height: 812px) {
-    #avancar {
-        position: absolute;
-        top: 80%;
-        left: 35%;
-    }
-
-    #orientacoes {
-        padding: 0 6%;
-    }
-
-    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
-    #start {
-        position: relative;
-        top: 75%;
-        left: 50%;
+        margin-top: -45px;
+        margin-left: -45px;
+        left: 65%;
+        bottom: 20%; */
+        grid-area: 2 / 2 / span 1 / span 1;
     }
 }

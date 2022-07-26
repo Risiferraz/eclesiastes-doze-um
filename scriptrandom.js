@@ -4,6 +4,6 @@ function embaralhaCards(){
     this.card[cardEscolhido].valor
 }
 
-const bolaDaVez = this.card.charAt(cardEscolhido)
-this.card[cardEscolhido].recebeZIndex(bolaDaVez)
-document.getElementsByClassName (cardEscolhido).style.ZIndex = []
+// const bolaDaVez = this.card.charAt(cardEscolhido)
+// this.card[cardEscolhido].recebeZIndex(bolaDaVez)
+// document.getElementsByClassName (cardEscolhido).style.ZIndex = []
