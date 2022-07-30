@@ -32,7 +32,7 @@
             <img id="modelo" src="/imagens/pano-de-fundo.jpg">
             <button id="start" onclick="clicar()">START</button>
         </div>
-        <div id="jogo-em-andamento">
+        <div id="jogo-em-andamento" ondrop = "drop(event)" ondragover = "permitirDrop(event)">
             <div class="malha">
                 <div class="dropzone" id="Q1"></div>
                 <div class="dropzone" id="Q2"></div>
@@ -61,7 +61,7 @@
                 <div class="dropzone" id="Q25"></div>
                 <div class="dropzone" id="Q26"></div>
             </div>
-            <div class="containerpecas">
+            <div class="containerpecas" ondrop = "drop(event)" ondragover = "permitirDrop(event)">
                 <img class="card" id="lembra-te" draggable="true" src="/imagens/lembra-te2.jpg">
                 <img class="card" id="tambem" draggable="true" src="/imagens/também.jpg">
                 <img class="card" id="doteu" draggable="true" src="/imagens/do teu.jpg">

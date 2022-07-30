@@ -48,8 +48,18 @@ document.addEventListener("dragover", event => {
   event.preventDefault();
 });
 
+function permitirDrop(ev) {
+  ev.preventDefault();
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
 document.addEventListener("drop", event => {
-  // impedir a ação padrão (abrir como link para alguns elementos)
+  // impedir a ação padrão (permitir dropagem para elementos dragaveis)
   event.preventDefault();
   //mover o elemento arrastado para o destino de soltar selecionado
   if (event.target.className == "dropzone") {
