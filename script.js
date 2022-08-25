@@ -9,7 +9,9 @@ function passar() {
   document.getElementById("tela-inicial").style.display = "block"
 }
 const listaDeCards = document.getElementsByClassName('card');
-const listaDeCardsNaoSorteados = listaDeCards
+const listaDeCardsNaoSorteados = Array.from(listaDeCards)
+const listaDeNumerosAleatoriosJaSorteados = []
+
 //*******FUNÇÕES QUE ACONTECEM AO CLICAR NO "START"*******/
 function clicar() {
   document.getElementById("tela-inicial").style.display = "none"
@@ -19,20 +21,21 @@ function clicar() {
 }
 function sorteiaCardDaVez() {
   const numeroAleatorio = Math.floor(Math.random() * listaDeCardsNaoSorteados.length)
-  listaDeCardsNaoSorteados[numeroAleatorio].style.display = "inline";
-  const index = listaDeCardsNaoSorteados.indexOf(numeroAleatorio);
-  if (index > -1) {
-    listaDeCardsNaoSorteados.splice(index, 1);
+  if (listaDeNumerosAleatoriosJaSorteados.includes(numeroAleatorio)) {
+    sorteiaCardDaVez()
   }
-
+  else {
+    listaDeCardsNaoSorteados[numeroAleatorio].style.display = "inline";
+    listaDeNumerosAleatoriosJaSorteados.push(numeroAleatorio);
+  }
 }
 //*******FUNÇÕES QUE ACONTECEM NO DRAG AND DROP"*******/
 let dragged = null;
 
-// document.addEventListener("dragend", event => {
-//   dragged = event.target;
-// sorteiaCardDaVez()
-// });
+document.addEventListener("dragend", event => {
+  dragged = event.target;
+  sorteiaCardDaVez()
+});
 
 document.addEventListener("dragstart", event => {
   dragged = event.target;
@@ -71,9 +74,9 @@ document.addEventListener("drop", event => {
   }
 });
 
-const Q1 = id = "lembra-te"
-const Q2 = id = "tambem"
-const Q3 = id = "doteu"
-const Q25 = id = "contentamento"
-const Q26 = id = "eclesiastes"
+// const Q1 = id = "lembra-te"
+// const Q2 = id = "tambem"
+// const Q3 = id = "doteu"
+// const Q25 = id = "contentamento"
+// const Q26 = id = "eclesiastes"
 

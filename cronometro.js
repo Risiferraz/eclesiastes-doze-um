@@ -7,7 +7,7 @@
             // this.cronometro = cronometro;
     }
     atualizaCronometro() {
-        console.log('atualizando cronometro')
+        // console.log('atualizando cronometro')
         if (this.isCronometroAtivo) {
             this.segundos++
             if (this.segundos>=60){
@@ -21,7 +21,7 @@
             const minutosString = this.minutos <= 9 ?`0${this.minutos}` : `${this.minutos}`
             const cronometro = `${minutosString}:${segundosString}`
             document.getElementById('cronometro').textContent= cronometro
-            console.log("tempo", cronometro)
+            // console.log("tempo", cronometro)
         }
     }
     pararCronometro(){
