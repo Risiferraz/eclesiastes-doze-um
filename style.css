@@ -152,9 +152,8 @@ p {
     background-position: center;
     margin: 2% auto;
     display: grid;
-    width: 95%;
-    max-width: 680px;
-    height: 95%;
+    width: 408px;
+    height: 432px;
     grid-template-columns: repeat(17, 1fr);
     grid-template-rows: repeat(18, 1fr);
 }
@@ -331,8 +330,8 @@ p {
 
 .card {
     position: absolute;
-    margin-top: 5%;
-    margin-left: 3%;
+    /* margin-top: 5%;
+    margin-left: 3%; */
     display: none;
     transform: scale(60%);
 }

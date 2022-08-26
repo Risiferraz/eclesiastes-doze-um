@@ -3,7 +3,7 @@ const cronometro = new Cronometro()
 setInterval(() => {
   cronometro.atualizaCronometro()
 }, 1000);
-//*******FUNÇÕES QUE ACONTECEM AO INICIAR*******/
+//******* FUNÇÕES QUE ACONTECEM AO INICIAR *******/
 function passar() {
   document.getElementById("capa").style.display = "none"
   document.getElementById("tela-inicial").style.display = "block"
@@ -12,7 +12,7 @@ const listaDeCards = document.getElementsByClassName('card');
 const listaDeCardsNaoSorteados = Array.from(listaDeCards)
 const listaDeNumerosAleatoriosJaSorteados = []
 
-//*******FUNÇÕES QUE ACONTECEM AO CLICAR NO "START"*******/
+//******* FUNÇÕES QUE ACONTECEM AO CLICAR NO "START" *******/
 function clicar() {
   document.getElementById("tela-inicial").style.display = "none"
   document.getElementById("jogo-em-andamento").style.display = "grid"
@@ -44,6 +44,11 @@ document.addEventListener("dragstart", event => {
   document.getElementById("dizer").style.transform = "rotate(270deg)";
   document.getElementById("dias").style.transform = "rotate(270deg)";
   document.getElementById("antes").style.transform = "rotate(270deg)";
+  // document.getElementById("lembra-te").style.transform = "scale(60%)";
+  // document.getElementById("neles").style.transform = "scale(60%)";
+  // document.getElementById("dizer").style.transform = "scale(60%)";
+  // document.getElementById("dias").style.transform = "scale(60%)";
+  // document.getElementById("antes").style.transform = "scale(60%)";
   // document.getElementsByClassName("card").style.transformOrigin = "0 0";
 });
 
