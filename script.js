@@ -36,19 +36,15 @@ document.addEventListener("dragend", event => {
   dragged = event.target;
   sorteiaCardDaVez()
 });
-
+const rotateAndScale = "rotate(270deg) scale(60%)";
+const listaDeIdsParaRotacionar = [
+  "lembra-te", "neles", "dizer", "antes", "dias"
+]
 document.addEventListener("dragstart", event => {
   dragged = event.target;
-  document.getElementById("lembra-te").style.transform = "rotate(270deg)";
-  document.getElementById("neles").style.transform = "rotate(270deg)";
-  document.getElementById("dizer").style.transform = "rotate(270deg)";
-  document.getElementById("dias").style.transform = "rotate(270deg)";
-  document.getElementById("antes").style.transform = "rotate(270deg)";
-  // document.getElementById("lembra-te").style.transform = "scale(60%)";
-  // document.getElementById("neles").style.transform = "scale(60%)";
-  // document.getElementById("dizer").style.transform = "scale(60%)";
-  // document.getElementById("dias").style.transform = "scale(60%)";
-  // document.getElementById("antes").style.transform = "scale(60%)";
+  if(listaDeIdsParaRotacionar.includes(dragged.id)){
+    dragged.style.transform = rotateAndScale;
+  }
   // document.getElementsByClassName("card").style.transformOrigin = "0 0";
 });
 

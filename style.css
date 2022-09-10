@@ -140,7 +140,7 @@ p {
     height: 800px;
     box-sizing: border-box;
     grid-template-columns: auto;
-    grid-template-rows: 3fr 1.5fr 1fr;
+    grid-template-rows: 432px 2fr 1fr;
 }
 
 .malha {
@@ -347,10 +347,8 @@ p {
     border-radius: 8px;
     border: solid 4px rgb(156, 147, 147);
     position: absolute;
-    margin-top: -45px;
-    margin-left: -45px;
-    /* left: 65%;
-    bottom: 20%; */
+    bottom: 5%;
+    right: 10%;
     grid-area: 3 / 1 / span 1 / span 1;
 }
 
