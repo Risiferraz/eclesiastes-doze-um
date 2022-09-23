@@ -65,13 +65,23 @@ function drop(ev) {
 document.addEventListener("drop", event => {
   // impedir a ação padrão (permitir dropagem para elementos dragaveis)
   event.preventDefault();
+  console.log("id do target", event.target.id)
+  console.log("gabarito da dropagem", gabaritoDeDropagem[event.target.id])
+  console.log("id do dragged", dragged.id)
+  console.log("teste do if", dragged.id == gabaritoDeDropagem[event.target.id])
   //mover o elemento arrastado para o destino de soltar selecionado
-  if (event.target.className == "dropzone") {
+  // if (event.target.className == "dropzone") {
+  if (dragged.id == gabaritoDeDropagem[event.target.id]) {
     dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
-    if (Q26 == "eclesiastes") {
-      this.dragable = false;
-    }
+    
+    // if (Q26 == "eclesiastes") {
+    //   this.dragable = false;
+    // }
+  }
+  else {
+    dragged.parentNode.removeChild(dragged);
+    event.target.appendChild(dragged);
   }
 });
 
