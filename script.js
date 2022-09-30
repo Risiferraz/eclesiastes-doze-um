@@ -29,12 +29,12 @@ function sorteiaCardDaVez() {
     listaDeNumerosAleatoriosJaSorteados.push(numeroAleatorio);
   }
 }
-//*******FUNÇÕES QUE ACONTECEM NO DRAG AND DROP"*******/
+//*******FUNÇÕES QUE ACONTECEM NO DRAG AND DROP *******/
 let dragged = null;
 
 document.addEventListener("dragend", event => {
   dragged = event.target;
-  sorteiaCardDaVez()
+  // sorteiaCardDaVez()
 });
 const rotateAndScale = "rotate(270deg) scale(60%)";
 const listaDeIdsParaRotacionar = [
@@ -52,13 +52,17 @@ document.addEventListener("dragover", event => {
   event.preventDefault();
 });
 
+document.getElementById('botao-proximo').addEventListener("click", event => {
+  event.preventDefault();
+  sorteiaCardDaVez();
+});
 function permitirDrop(ev) {
   ev.preventDefault();
 }
 
 function drop(ev) {
   ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
+  const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
 
@@ -74,7 +78,8 @@ document.addEventListener("drop", event => {
   if (dragged.id == gabaritoDeDropagem[event.target.id]) {
     dragged.parentNode.removeChild(dragged);
     event.target.appendChild(dragged);
-    
+    event.target.style.opacity = "0"
+    dragged.style.opacity = "0";
     // if (Q26 == "eclesiastes") {
     //   this.dragable = false;
     // }
