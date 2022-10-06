@@ -36,23 +36,22 @@ document.addEventListener("dragend", event => {
   dragged = event.target;
   // sorteiaCardDaVez()
 });
-const rotateAndScale = "rotate(270deg) scale(60%)";
+const rotateCard = "rotate(270deg)";
 const listaDeIdsParaRotacionar = [
   "lembra-te", "neles", "dizer", "antes", "dias"
 ]
 document.addEventListener("dragstart", event => {
   dragged = event.target;
   if(listaDeIdsParaRotacionar.includes(dragged.id)){
-    dragged.style.transform = rotateAndScale;
+    dragged.style.transform = rotateCard;
   }
-  // document.getElementsByClassName("card").style.transformOrigin = "0 0";
 });
 
 document.addEventListener("dragover", event => {
   event.preventDefault();
 });
 
-document.getElementById('botao-proximo').addEventListener("click", event => {
+document.getElementById('dispensercards').addEventListener("click", event => {
   event.preventDefault();
   sorteiaCardDaVez();
 });

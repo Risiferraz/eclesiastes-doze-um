@@ -1,4 +1,5 @@
-/* regras para uma largura máxima de 428px */
+/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
+/* regras para uma largura ENTRE 391 a 428px */
 
 @media (max-width:428px) {
     .container {
@@ -11,27 +12,22 @@
     #capa {
         width: 100vw;
         height: 100vh;
-        position: relative;
-        grid-template-columns: 100vw;
-        grid-template-rows: 2fr 1.5fr 1fr;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 43vh 37vh 20vh;
     }
 
     #titulo {
-        grid-area: 1 / 1 / span 1 / span 1;
+        padding: 10% 2%;
     }
 
-    #orientacoes {
-        grid-area: 2 / 1 / span 1 / span 1;
+    #logo {
+        width: 400px;
+        height: 320px;
+        object-fit: contain;
     }
 
-    #avancar {
-        grid-area: 3 / 1 / span 1 / span 1;
-    }
-
-    #btn {
-        position: absolute;
-        left: 50%;
-        margin-left: -48px;
+    h2 {
+        margin-bottom: 5%;
     }
 
     /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
@@ -39,134 +35,218 @@
     #tela-inicial {
         width: 100vw;
         height: 100vh;
-    }
-
-    #modelo {
-        width: 100vw;
+        margin: 0;
     }
 
     /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
 
     #jogo-em-andamento {
-        width: 100vw;
-        height: 100vh;
-        grid-template-columns: 100vw;
-        grid-template-rows: 55vh 25% auto;
-        position: relative;
+        width: 100%;
+        grid-template-rows: 52% 48% auto;
+        grid-template-columns: 23% 54% 23%;
     }
 
     .malha {
-        width: 100vw;
-        height: 87%;
-        background-size: contain;
+        margin: 24px 5% 0px 5%;
+        width: 90%;
+        grid-template-columns: repeat(17, auto);
+        grid-template-rows: repeat(18, auto);
     }
 
-    .card {
-        margin-top: 0;
-        margin-left: 0;
+    .dropzone {
+        opacity: 0.7;
     }
 
-    #Marcatempo {
-        left: 50%;
-    }
-}
-
-/* ____________________________________________________________________________ */
-
-/* regras para uma altura mínima de 1000px */
-/* afeta apenas o Kindle Fire HDX Linus e o iPad*/
-/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
-@media (min-height: 1000px) {
-    #avancar {
-        position: relative;
-    }
-
-    #btn {
-        position: absolute;
-        left: 50%;
-        margin-left: -48px;
+    #dispensercards {
+        scale: 90%;
     }
 }
 
-/* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
-#jogo-em-andamento {
-    position: relative;
-}
+/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
+/* regras para uma largura máxima de 390px */
 
-.malha {
-    height: 100%;
-    background-size: 100% 100%;
-}
+@media (max-width:390px) {
 
-.card {
-    margin-top: 13%;
-    margin-left: 13%;
-}
-
-#Marcatempo {
-    left: 50%;
-}
-
-/* _____________________________________________________________________________________ */
-/* regras para uma altura máxima de 667px */
-/*apenas afeta o iPhone SE 2nd gen iOS 14.6*/
-/* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
-@media (max-height: 667px) {
-    .malha {
-        height: 100%;
-        background-size: 100% 100%;
+    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+    #capa {
+        width: 100%;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 44vh 35vh auto;
     }
 
-    #avancar {
-        position: relative;
+    #titulo {
+        padding: 3% 2%;
     }
 
-    #btn {
-        position: absolute;
-        left: 50%;
-        margin-left: -48px;
+    #logo {
+        width: 350px;
+        height: 280px;
+        object-fit: contain;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        margin: 3%;
+        line-height: 1.1em;
+        font-size: 0.9em;
     }
 
     #orientacoes {
-        padding: 0 6%;
+        padding: 0 3%;
+        line-height: 3em;
+        font-size: 1.1em;
+    }
+
+    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
+
+    #tela-inicial {
+        width: 100%;
+        height: 100%;
+        margin: 0;
     }
 
     /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+
+    #jogo-em-andamento {
+        width: 100%;
+        grid-template-rows: 363px 39% auto;
+        grid-template-columns: 25% auto 25%;
+        height: 100vh;
+    }
+
+    .malha {
+        margin: 20px 5% 0px 5%;
+        width: 90%;
+        grid-template-columns: repeat(17, auto);
+        grid-template-rows: repeat(18, auto);
+    }
+
+    .dropzone {
+        opacity: 0.7;
+    }
+
+    .card {
+        scale: 80%;
+    }
+
     #Marcatempo {
-        left: 50%;
+        scale: 80%;
+    }
+
+    #dispensercards {
+        scale: 90%;
+        margin-left: 10px;
+    }
+
+    #Marcatempo {
+        margin-right: 10px;
     }
 }
 
-/* ____________________________________________________________________________ */
-/* regras para orientation landscape*/
+/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
+/* regras para orientation: portrait e altura de até 668px*/
 
-@media (orientation: landscape) and (max-width: 950px) {
+@media (orientation: portrait) and (max-height:668px) {
+
+    h2 {
+        font-size: 1em;
+        margin: 1% 3%;
+        line-height: 2em;
+    }
+
+    p {
+        margin: 0 3%;
+        line-height: 1.3em;
+        font-size: 0.8em;
+    }
+
+    #avancar {
+        scale: 80%;
+        top: 20%;
+    }
+    #capa {
+        height: 98vh;
+    }
+
+    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+
+    #jogo-em-andamento {
+        grid-template-rows: 54% 31% auto;
+        grid-template-columns: 26% auto 23%;
+        height: 100vh;
+    }
+
+    .malha {
+        margin: 0 5% 0px;
+        grid-template-columns: repeat(17, auto);
+        grid-template-rows: repeat(18, auto);
+    }
+
+    .dropzone {
+        opacity: 0.7;
+    }
+
+    .card {
+        scale: 80%;
+    }
+
+    #Marcatempo {
+        scale: 80%;
+    }
+
+    #dispensercards {
+        scale: 90%;
+    }
+}
+
+/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
+/* ____________________________________________________________________________ */
+/* regras para orientation landscape - com altura de 376 até 428px*/
+
+@media (orientation: landscape) and (max-height: 428px) {
 
     .container {
         width: 100vw;
         height: 100vh;
         max-width: 100vw;
-        max-height: 100vh;
     }
 
-    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
     #capa {
         width: 100vw;
         height: 100vh;
-        max-width: 100vw;
-        padding: 0;
-        margin: 0;
-        position: relative;
-        grid-template-columns: 2fr 1.5fr;
+        max-width: 800px;
+        grid-template-columns: 2fr 1.8fr;
         grid-template-rows: 2fr 1fr;
     }
 
     #titulo {
         grid-area: 1 / 1 / span 2 / span 1;
+        padding: 3%;
+    }
+
+    #logo {
+        width: 388px;
+        object-fit: contain;
     }
 
     #orientacoes {
         grid-area: 1 / 2 / span 1 / span 1;
+        text-align: justify;
+        text-justify: inter-word;
+        padding: 4%;
+    }
+
+    h2 {
+        margin-bottom: 5%;
+    }
+
+    p {
+        margin: 3%;
+        line-height: 1.1em;
+        font-size: 0.9em;
     }
 
     #avancar {
@@ -176,38 +256,31 @@
     /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
 
     #tela-inicial {
-        display: grid;
-        width: 100vw;
-        max-width: 100vw;
         height: 100vh;
+        max-width: 420px;
         margin: 0;
-        position: relative;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
     }
 
     #modelo {
-        width: 50%;
+        width: 100%;
         height: 100vh;
-        margin-left: 0;
         padding-top: 0;
-        grid-area: 1 / 1 / span 1 / span 1;
     }
 
     #start {
-        position: absolute;
-        grid-area: 1 / 2 / span 1 / span 1;
-        top: 50%;
-        left: 75%;
+        bottom: 40%;
+        left: 158%;
+        margin-left: -100px;
+        margin-top: -35px;
     }
 
     /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+
     #jogo-em-andamento {
-        grid-template-columns: 2fr 2fr;
-        grid-template-rows: 2fr 1fr;
-        margin: 0;
-        width: 100vw;
+        width: 100%;
         max-width: 100vw;
+        grid-template-columns: 48% 13% 29% 10%;
+        grid-template-rows: 3fr 1fr;
         height: 100vh;
     }
 
@@ -215,27 +288,194 @@
         grid-area: 1 / 1 / span 2 / span 1;
         margin: 0;
         width: 100%;
-        max-width: 100%;
-        height: 100%;
+        grid-template-columns: repeat(17, auto);
+        grid-template-rows: repeat(18, auto);
     }
 
-    #containerpecas {
-        grid-area: 1 / 2 / span 1 / span 1;
+    #area-de-espera {
+        grid-area: 1 / 2 / span 1 / span 3;
+        width: 100%;
+        /* background-color: darkorange; */
     }
 
-    .card {
-        margin-top: 5%;
-        margin-left: 13%;
+    #dispensercards {
+        grid-area: 2 / 2 / span 1 / span 1;
+        margin-left: 21px;
+        width: 95px;
+        height: 90px;
+        z-index: 2;
+    }
+
+    .containerpecas {
+        grid-area: 2 / 3 / span 1 / span 1;
+        padding-top: 0%;
+        /* background-color: blue; */
     }
 
     #Marcatempo {
-        /* width: 90px;
-        height: 80px;
-        position: absolute;
-        margin-top: -45px;
-        margin-left: -45px;
-        left: 65%;
-        bottom: 20%; */
+        grid-area: 2 / 4 / span 1 / span 1;
+        padding: 2%;
+        position: relative;
+    }
+}
+
+/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
+/* ____________________________________________________________________________ */
+/* regras para orientation landscape e com altura de até 375 px*/
+@media (orientation: landscape) and (max-height: 375px) {
+
+    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    #capa {
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 48% 52%;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    #titulo {
+        grid-area: 1 / 1 / span 2 / span 1;
+        padding: 3%;
+    }
+
+    #logo {
+        width: 360px;
+    }
+
+    #orientacoes {
+        text-align: justify;
+        text-justify: inter-word;
+        padding: 4%;
+    }
+
+    h2 {
+        margin-bottom: 5%;
+    }
+
+    p {
+        margin: 3%;
+        line-height: 1.1em;
+        font-size: 0.9em;
+    }
+
+    #avancar {
+        scale: 100%;
+        top: 0%;
+    }
+
+    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
+
+    #tela-inicial {
+        margin: 0 auto;
+        max-width: 100vw;
+        height: 100vh;
+    }
+
+    #modelo {
+        width: 50%;
+        height: 100vh;
+        margin-left: 0;
+        margin-right: auto;
+        padding-top: 0;
+    }
+
+    #start {
+        bottom: 40%;
+        left: 77%;
+    }
+
+    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
+
+    .card {
+        scale: 80%;
+    }
+
+    #jogo-em-andamento {
+        grid-template-columns: 48% 13% 29% 10%;
+        grid-template-rows: 3fr 1fr;
+    }
+
+    .malha {
+        grid-area: 1 / 1 / span 2 / span 1;
+    }
+
+    #area-de-espera {
+        grid-area: 1 / 2 / span 1 / span 3;
+        /* background-color: aliceblue; */
+    }
+
+    #dispensercards {
         grid-area: 2 / 2 / span 1 / span 1;
+        align-self: center;
+        margin: auto;
+        width: 80px;
+        height: 85px;
+        font-size: 9pt;
+        padding: 2%;
+    }
+
+    .containerpecas {
+        grid-area: 2 / 3 / span 1 / span 1;
+        position: relative;
+        /* background-color: rosybrown; */
+    }
+
+    #Marcatempo {
+        grid-area: 2 / 4 / span 1 / span 1;
+        align-self: center;
+        width: 55px;
+        height: 60px;
+        padding: 1%;
+        left: 2%;
+    }
+    #cronometro {
+        font-size: 15px;
+        line-height: 1.5rem;
+    }
+    h5 {
+        font-size: 7pt;
+        margin-bottom: 8%;
+    }
+}
+
+/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
+/* ____________________________________________________________________________ */
+/* regras para orientation landscape e com altura de até 375 px*/
+@media (orientation: landscape) and (max-height: 375px) and (max-width: 700px) {
+
+    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+    #capa {
+        grid-template-columns: 48% 52%;
+    }
+
+    #logo {
+        width: 320px;
+    }
+
+    #avancar {
+        scale: 75%;
+    }
+
+    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
+
+    #tela-inicial {
+        margin: 0;
+    }
+
+    #modelo {
+        width: 60%;
+    }
+
+    #start {
+        bottom: 40%;
+        left: 82%;
+        margin-left: -100px;
+        margin-top: -35px;
     }
 }
