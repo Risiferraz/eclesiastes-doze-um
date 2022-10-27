@@ -3,6 +3,15 @@ const cronometro = new Cronometro()
 setInterval(() => {
   cronometro.atualizaCronometro()
 }, 1000);
+//********LISTA DA ÁREA DE ESPERA******** */
+const listaDaAreaDeEspera = ["P1", "P2", "P3", "P4"]
+
+function pegaAreaDeEsperaAleatoria(){
+  const total = listaDaAreaDeEspera.length
+  const posicaoSorteada = Math.floor(Math.random() * total)
+  return document.getElementById(listaDaAreaDeEspera[posicaoSorteada])
+}
+
 //******* FUNÇÕES QUE ACONTECEM AO INICIAR *******/
 function passar() {
   document.getElementById("capa").style.display = "none"
@@ -88,7 +97,8 @@ document.addEventListener("drop", event => {
   else {
     dragged.style.display="none"
     setTimeout(()=> {
-      document.getElementById('area-de-espera').appendChild(dragged);
+      const areaDeEsperaAleatoria = pegaAreaDeEsperaAleatoria()
+      areaDeEsperaAleatoria.appendChild(dragged);
       dragged.style.display="block"
     },1000)
 

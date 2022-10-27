@@ -351,12 +351,33 @@ p {
     z-index: 3;
 }
 #area-de-espera{
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(212, 207, 207);
     grid-area: 2 / 1 / span 1 / span 3;
     position: relative;
+    display: flex;
     /* display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr; */
+}
+#P1{
+    width: 30%;
+    background-color: beige;
+    opacity: 50%;
+}
+#P2{
+    width: 30%;
+    background-color: rgb(127, 71, 131);
+    opacity: 50%;
+}
+#P3{
+    width: 40%;
+    background-color: rgb(123, 123, 21);
+    opacity: 50%;
+}
+#P4{
+    width: 50%;
+    background-color: rgb(107, 10, 13);
+    opacity: 50%;
 }
 #dispensercards{
     grid-area: 3 / 1 / span 1 / span 1;
