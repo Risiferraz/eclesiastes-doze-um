@@ -143,6 +143,7 @@ p {
     box-sizing: border-box;
     grid-template-rows: 456px 244px 100px;
     grid-template-columns: 100px 250px 100px;
+    z-index: 1;
 }
 
 #Q1 {
@@ -155,6 +156,7 @@ p {
     grid-area: 1 / 4 / span 2 / span 5;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: darkred;
 }
 
 #Q3 {
@@ -184,126 +186,147 @@ p {
     grid-area: 3 / 8 / span 3 / span 3;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: brown;
 }
 
 #Q7 {
     grid-area: 3 / 11 / span 3 / span 7;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: greenyellow;
 }
 
 #Q8 {
     grid-area: 6 / 4 / span 4 / span 2;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: gray;
 }
 
 #Q9 {
     grid-area: 6 / 6 / span 2 / span 3;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: deeppink;
 }
 
 #Q10 {
     grid-area: 6 / 9 / span 3 / span 6;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: antiquewhite;
 }
 
 #Q11 {
     grid-area: 6 / 15 / span 3 / span 3;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: darkslategrey;
 }
 
 #Q12 {
     grid-area: 10 / 1 / span 2 / span 5;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: darkolivegreen;
 }
 
 #Q13 {
     grid-area: 8 / 6 / span 4 / span 3;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: darkorange;
 }
 
 #Q14 {
     grid-area: 9 / 9 / span 3 / span 2;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: aliceblue;
 }
 
 #Q15 {
     grid-area: 9 / 11 / span 3 / span 7;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: darkkhaki;
 }
 
 #Q16 {
     grid-area: 12 / 1 / span 3 / span 3;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: burlywood;
 }
 
 #Q17 {
     grid-area: 12 / 4 / span 2 / span 4;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: darkorchid;
 }
 
 #Q18 {
     grid-area: 12 / 8 / span 3 / span 3;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: darkgreen;
 }
 
 #Q19 {
     grid-area: 12 / 11 / span 3 / span 2;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: aquamarine;
 }
 
 #Q20 {
     grid-area: 12 / 13 / span 3 / span 5;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: cyan;
 }
 
 #Q21 {
     grid-area: 15 / 1 / span 4 / span 3;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: black;
 }
 
 #Q22 {
     grid-area: 14 / 4 / span 2 / span 4;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: beige;
 }
 
 #Q23 {
     grid-area: 16 / 4 / span 3 / span 5;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: cyan;
 }
 
 #Q24 {
     grid-area: 15 / 9 / span 4 / span 2;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: crimson;
 }
 
 #Q25 {
     grid-area: 15 / 11 / span 2 / span 7;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: chocolate;
 }
 
 #Q26 {
     grid-area: 17 / 11 / span 2 / span 7;
     background-color: rgb(130, 130, 130);
     border: 2px solid rgb(120, 120, 120, 0.5);
+    background-color: chartreuse;
 }
 
 .malha {
@@ -319,16 +342,21 @@ p {
     width: 408px;
     grid-template-columns: repeat(17, 24px);
     grid-template-rows: repeat(18, 24px);
+    z-index: 2;
 }
 
 .dropzone {
     opacity: 0.8;
     position: relative;
+    z-index: 3;
 }
 #area-de-espera{
     background-color: rgb(33, 33, 33);
     grid-area: 2 / 1 / span 1 / span 3;
     position: relative;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
 }
 #dispensercards{
     grid-area: 3 / 1 / span 1 / span 1;

@@ -55,15 +55,15 @@ document.getElementById('dispensercards').addEventListener("click", event => {
   event.preventDefault();
   sorteiaCardDaVez();
 });
-function permitirDrop(ev) {
-  ev.preventDefault();
-}
+// function permitirDrop(ev) {
+//   ev.preventDefault();
+// }
 
-function drop(ev) {
-  ev.preventDefault();
-  const data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
+// function drop(ev) {
+//   ev.preventDefault();
+//   const data = ev.dataTransfer.getData("text");
+//   ev.target.appendChild(document.getElementById(data));
+// }
 
 document.addEventListener("drop", event => {
   // impedir a ação padrão (permitir dropagem para elementos dragaveis)
@@ -76,22 +76,24 @@ document.addEventListener("drop", event => {
   // if (event.target.className == "dropzone") {
   if (dragged.id == gabaritoDeDropagem[event.target.id]) {
     dragged.parentNode.removeChild(dragged);
-    event.target.appendChild(dragged);
+    // event.target.appendChild(dragged);
     event.target.style.opacity = "0"
-    dragged.style.opacity = "0";
+    dragged.style.opacity = "1";
+    console.log ('Está correto')
+    // dragged.style.zIndex = "20";
     // if (Q26 == "eclesiastes") {
     //   this.dragable = false;
     // }
   }
   else {
-    dragged.parentNode.removeChild(dragged);
-    event.target.appendChild(dragged);
+    dragged.style.display="none"
+    setTimeout(()=> {
+      document.getElementById('area-de-espera').appendChild(dragged);
+      dragged.style.display="block"
+    },1000)
+
+    console.log ('Não está correto')
   }
 });
 
-// const Q1 = id = "lembra-te"
-// const Q2 = id = "tambem"
-// const Q3 = id = "doteu"
-// const Q25 = id = "contentamento"
-// const Q26 = id = "eclesiastes"
 
