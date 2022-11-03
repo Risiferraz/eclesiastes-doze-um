@@ -100,7 +100,7 @@ document.addEventListener("drop", event => {
       const areaDeEsperaAleatoria = pegaAreaDeEsperaAleatoria()
       areaDeEsperaAleatoria.appendChild(dragged);
       dragged.style.display="block"
-    },1000)
+    },200)
 
     console.log ('Não está correto')
   }
