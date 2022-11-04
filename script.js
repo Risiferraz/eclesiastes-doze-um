@@ -4,13 +4,7 @@ setInterval(() => {
   cronometro.atualizaCronometro()
 }, 1000);
 //********LISTA DA ÁREA DE ESPERA******** */
-const listaDaAreaDeEspera = ["P1", "P2", "P3", "P4"]
-
-function pegaAreaDeEsperaAleatoria(){
-  const total = listaDaAreaDeEspera.length
-  const posicaoSorteada = Math.floor(Math.random() * total)
-  return document.getElementById(listaDaAreaDeEspera[posicaoSorteada])
-}
+const gerenciadorDeAreaDeEspera = new GerenciadorDeAreaDeEspera()
 
 //******* FUNÇÕES QUE ACONTECEM AO INICIAR *******/
 function passar() {
@@ -96,14 +90,12 @@ document.addEventListener("drop", event => {
   }
   else {
     dragged.style.display="none"
-    setTimeout(()=> {
-      const areaDeEsperaAleatoria = pegaAreaDeEsperaAleatoria()
-      areaDeEsperaAleatoria.appendChild(dragged);
-      dragged.style.display="block"
-    },200)
+    setTimeout(()=> gerenciadorDeAreaDeEspera.incluiCardNaAreaDeEspera(dragged),200)
+    
 
     console.log ('Não está correto')
   }
 });
+
 
 
