@@ -56,37 +56,44 @@ document.addEventListener("dragover", event => {
 
 document.getElementById('dispensercards').addEventListener("click", event => {
   event.preventDefault();
-  if (gerenciadorDeAreaDeEspera.verificaSeTemAreaDisponivel()) {
-    sorteiaCardDaVez();
-  }
-  else {
-    alert ("LIBERA AREA DE ESPERA")
-  }
+  sorteiaCardDaVez();
 });
+// function permitirDrop(ev) {
+//   ev.preventDefault();
+// }
+
+// function drop(ev) {
+//   ev.preventDefault();
+//   const data = ev.dataTransfer.getData("text");
+//   ev.target.appendChild(document.getElementById(data));
+// }
 
 document.addEventListener("drop", event => {
-  // impedir a ação padrão (default) e assim permitir dropagem para elementos dragaveis)
+  // impedir a ação padrão (permitir dropagem para elementos dragaveis)
   event.preventDefault();
   console.log("id do target", event.target.id)
   console.log("gabarito da dropagem", gabaritoDeDropagem[event.target.id])
   console.log("id do dragged", dragged.id)
   console.log("teste do if", dragged.id == gabaritoDeDropagem[event.target.id])
   //mover o elemento arrastado para o destino de soltar selecionado
-
-  //*******FUNÇÕES QUE ACONTECEM NO DROP *******/
-  // const newclasse = document.getElementsByClassName("card");!!!!!!!!!!!!!!!!!
-
+  // if (event.target.className == "dropzone") {
   if (dragged.id == gabaritoDeDropagem[event.target.id]) {
     dragged.parentNode.removeChild(dragged);
+    // event.target.appendChild(dragged);
     event.target.style.opacity = "0"
     dragged.style.opacity = "1";
-    // console.log ('Está correto')
+    console.log ('Está correto')
+    // dragged.style.zIndex = "20";
+    // if (Q26 == "eclesiastes") {
+    //   this.dragable = false;
+    // }
   }
   else {
     dragged.style.display="none"
     setTimeout(()=> gerenciadorDeAreaDeEspera.incluiCardNaAreaDeEspera(dragged),200)
-    // newclasse.classList.add("card-drop");!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    // console.log ('Não está correto')
+    
+
+    console.log ('Não está correto')
   }
 });
 

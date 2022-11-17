@@ -10,18 +10,30 @@ class GerenciadorDeAreaDeEspera {
 incluiCardNaAreaDeEspera(cardDropado){
     if (cardDropado.id == "lembra-te") {
         const areaDeEsperaAleatoria = document.getElementById("P5")
-        areaDeEsperaAleatoria.appendChild(cardDropado);
-        cardDropado.style.display="block"
+        areaDeEsperaAleatoria.recebeCard(cardDropado)
       }
       else {
         const areaDeEsperaAleatoria = this.pegaAreaDeEsperaAleatoria()
-        areaDeEsperaAleatoria.appendChild(cardDropado);
-        cardDropado.style.display="block"
+        areaDeEsperaAleatoria.recebeCard(cardDropado)
+    }
+}
+verificaSeTemAreaDisponivel() {
+    if (!this.listaDeAreasDeEspera.filter(a=>a.disponivel).length) {
+        return false
+    }
+    else {
+        return true
     }
 }
 pegaAreaDeEsperaAleatoria(){
     const total = this.listaDeAreasDeEspera.length
     const posicaoSorteada = Math.floor(Math.random() * total)
-    return this.listaDeAreasDeEspera[posicaoSorteada].elemento
+    const areaDeEsperaAleatoria = this.listaDeAreasDeEspera[posicaoSorteada]//pega o elemento das linhas 4 a 8
+    if (areaDeEsperaAleatoria.disponivel) {//tá disponível? Beleza
+        return areaDeEsperaAleatoria
+    }
+    else {
+        return this.pegaAreaDeEsperaAleatoria() //se não está disponível, sorteia de novo
+    }
   }
 }

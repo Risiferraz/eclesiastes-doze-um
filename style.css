@@ -333,6 +333,7 @@ p {
     width: 101%;
     grid-area: 2 / 1 / span 1 / span 3;
     display: grid;
+    position: relative;
     grid-template-columns: auto auto 116px;
     grid-template-rows: 1fr 1fr;
 }
@@ -386,6 +387,7 @@ p {
     cursor: pointer;
 }
 .card-drop {
+    position: absolute;
     left: 50%;
     top: 50%;
 }
