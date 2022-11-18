@@ -25,6 +25,14 @@ verificaSeTemAreaDisponivel() {
         return true
     }
 }
+verificaSeCardVeioDaAreaDeEspera(idDoCardDropado) {
+   if (this.listaDeAreasDeEspera.filter(a=>a.cardDropadoId == idDoCardDropado).length) {
+    return true
+}
+    else {
+        return false
+    }
+}
 pegaAreaDeEsperaAleatoria(){
     const total = this.listaDeAreasDeEspera.length
     const posicaoSorteada = Math.floor(Math.random() * total)

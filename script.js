@@ -45,8 +45,9 @@ const listaDeIdsParaRotacionar = [
 ]
 document.addEventListener("dragstart", event => {
   dragged = event.target;
-  if(listaDeIdsParaRotacionar.includes(dragged.id)){
-    dragged.style.transform = rotateCard;
+  if(listaDeIdsParaRotacionar.includes(dragged.id)){//Se a lista de ids inclui o id do card em questão (dragged)
+    dragged.style.transform = rotateCard;//a constante 'dragged' faz referência ao objeto que enviou o evento (linha 39) e aplica o estilo transform que recebe a contante 'rotate 90"
+    dragged.style.top = "10%" //a constante 'dragged' faz referência ao objeto que enviou o evento (linha 39) e aplica o estilo mudando o position para 0
   }
 });
 
@@ -72,7 +73,12 @@ document.addEventListener("drop", event => {
   console.log("id do dragged", dragged.id)
   console.log("teste do if", dragged.id == gabaritoDeDropagem[event.target.id])
   //mover o elemento arrastado para o destino de soltar selecionado
-
+  if (gerenciadorDeAreaDeEspera.verificaSeCardVeioDaAreaDeEspera(dragged.id)){// se o gerenciador... verificar que o card veio da 'área de espera' neste caso apareça no console 'VEIO'
+    console.log ("VEIO")
+  }
+  else {
+    console.log ("NÃO VEIO")
+  }
   //*******FUNÇÕES QUE ACONTECEM NO DROP *******/
   // const newclasse = document.getElementsByClassName("card");!!!!!!!!!!!!!!!!!
 
