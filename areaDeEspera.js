@@ -11,4 +11,8 @@ class AreaDeEspera {
         this.disponivel=false//quando a area de espera recebe o card fica indisponível (false)
         this.cardDropadoId=cardDropado.id
     }
+    removeCard(){
+        this.disponivel=true
+        this.cardDropadoId=""
+    }
 }

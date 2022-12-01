@@ -74,7 +74,7 @@ document.addEventListener("drop", event => {
   console.log("teste do if", dragged.id == gabaritoDeDropagem[event.target.id])
   //mover o elemento arrastado para o destino de soltar selecionado
   if (gerenciadorDeAreaDeEspera.verificaSeCardVeioDaAreaDeEspera(dragged.id)){// se o gerenciador... verificar que o card veio da 'área de espera' neste caso apareça no console 'VEIO'
-    console.log ("VEIO")
+    gerenciadorDeAreaDeEspera.removeCardDaAreaDeEspera(dragged.id)
   }
   else {
     console.log ("NÃO VEIO")
@@ -82,7 +82,7 @@ document.addEventListener("drop", event => {
   //*******FUNÇÕES QUE ACONTECEM NO DROP *******/
   // const newclasse = document.getElementsByClassName("card");!!!!!!!!!!!!!!!!!
 
-  if (dragged.id == gabaritoDeDropagem[event.target.id]) {
+  if (dragged.id == gabaritoDeDropagem[event.target.id]) {//se o elemento arrastado
     dragged.parentNode.removeChild(dragged);
     event.target.style.opacity = "0"
     dragged.style.opacity = "1";
