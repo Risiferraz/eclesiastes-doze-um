@@ -9,8 +9,9 @@ class GerenciadorDeAreaDeEspera {
     }
     incluiCardNaAreaDeEspera(cardDropado) {
         if (cardDropado.id == "lembra-te") {
-            const areaDeEsperaAleatoria = document.getElementById("P5")
-            areaDeEsperaAleatoria.recebeCard(cardDropado)
+            const elementoP5 = document.getElementById("P5")
+            elementoP5.appendChild(cardDropado);
+            cardDropado.style.display="block"
         }
         else {
             const areaDeEsperaAleatoria = this.pegaAreaDeEsperaAleatoria()
