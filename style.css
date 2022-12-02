@@ -387,9 +387,42 @@ p {
     cursor: pointer;
 }
 .card-drop {
+    position: relative;
+}
+#antes {
+    width: 96px;
+    height: 48px;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    top: 40px;
+}
+#dias {
+    width: 96px;
+    height: 72px;
+    position: absolute;
+    top: 24px;
+}
+#neles {
+    width: 96px;
+    height: 48px;
+    position: absolute;
+    top: 35px;
+}
+#dizer {
+    width: 96px;
+    height: 72px;
+    position: absolute;
+    top: 14px;
+}
+#lembra-te {
+    width: 216px;
+    height: 72px;
+    position: absolute;
+    top: 87px;
+}
+.P {
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 #Marcatempo {
     background-color: rgb(182, 114, 13);
