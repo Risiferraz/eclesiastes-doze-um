@@ -45,9 +45,8 @@ const listaDeIdsParaRotacionar = [
 ]
 document.addEventListener("dragstart", event => {
   dragged = event.target;
-  if(listaDeIdsParaRotacionar.includes(dragged.id)){//Se a lista de ids inclui o id do card em questão (dragged)
+  if (listaDeIdsParaRotacionar.includes(dragged.id)) {//Se a lista de ids inclui o id do card em questão (dragged)
     dragged.style.transform = rotateCard;//a constante 'dragged' faz referência ao objeto que enviou o evento (linha 39) e aplica o estilo transform que recebe a contante 'rotate 90"
-    dragged.style.top = "10%" //a constante 'dragged' faz referência ao objeto que enviou o evento (linha 39) e aplica o estilo mudando o position para 0
   }
 });
 
@@ -61,7 +60,7 @@ document.getElementById('dispensercards').addEventListener("click", event => {
     sorteiaCardDaVez();
   }
   else {
-    alert ("LIBERA AREA DE ESPERA")
+    alert("LIBERA AREA DE ESPERA")
   }
 });
 
@@ -73,25 +72,23 @@ document.addEventListener("drop", event => {
   console.log("id do dragged", dragged.id)
   console.log("teste do if", dragged.id == gabaritoDeDropagem[event.target.id])
   //mover o elemento arrastado para o destino de soltar selecionado
-  if (gerenciadorDeAreaDeEspera.verificaSeCardVeioDaAreaDeEspera(dragged.id)){// se o gerenciador... verificar que o card veio da 'área de espera' neste caso apareça no console 'VEIO'
+  if (gerenciadorDeAreaDeEspera.verificaSeCardVeioDaAreaDeEspera(dragged.id)) {// se o gerenciador... verificar que o card veio da 'área de espera' neste caso apareça no console 'VEIO'
     gerenciadorDeAreaDeEspera.removeCardDaAreaDeEspera(dragged.id)
   }
   else {
-    console.log ("NÃO VEIO")
+    console.log("NÃO VEIO")
   }
   //*******FUNÇÕES QUE ACONTECEM NO DROP *******/
-  // const newclasse = document.getElementsByClassName("card");!!!!!!!!!!!!!!!!!
 
-  if (dragged.id == gabaritoDeDropagem[event.target.id]) {//se o elemento arrastado
+  if (dragged.id == gabaritoDeDropagem[event.target.id]) {//se o elemento arrastado corresponder (seu id) a algum constante do gabarito de dropagem
     dragged.parentNode.removeChild(dragged);
     event.target.style.opacity = "0"
     dragged.style.opacity = "1";
     // console.log ('Está correto')
   }
   else {
-    dragged.style.display="none"
-    setTimeout(()=> gerenciadorDeAreaDeEspera.incluiCardNaAreaDeEspera(dragged),200)
-    // newclasse.classList.add("card-drop");!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    dragged.style.display = "none"
+    setTimeout(() => gerenciadorDeAreaDeEspera.incluiCardNaAreaDeEspera(dragged), 200)
     // console.log ('Não está correto')
   }
 });
