@@ -1,3 +1,4 @@
+const quantidadeDeCards = 26
 //*******CRONOMETRO********
 const cronometro = new Cronometro()
 setInterval(() => {
@@ -5,7 +6,7 @@ setInterval(() => {
 }, 1000);
 //********LISTA DA ÁREA DE ESPERA******** */
 const gerenciadorDeAreaDeEspera = new GerenciadorDeAreaDeEspera()
-
+let quantidadeDeCardsEncaixadosCorretamente = 0
 //******* FUNÇÕES QUE ACONTECEM AO INICIAR *******/
 function passar() {
   document.getElementById("capa").style.display = "none"
@@ -56,6 +57,7 @@ document.addEventListener("dragover", event => {
 
 document.getElementById('dispensercards').addEventListener("click", event => {
   event.preventDefault();
+  verificaSeAcabouOsCards();
   if (gerenciadorDeAreaDeEspera.verificaSeTemAreaDisponivel()) {
     sorteiaCardDaVez();
   }
@@ -64,27 +66,33 @@ document.getElementById('dispensercards').addEventListener("click", event => {
   }
 });
 
+function verificaFimDeJogo() {
+    if (quantidadeDeCardsEncaixadosCorretamente == quantidadeDeCards){
+      alert("PARABENS VOCÊ GANHOU!")
+    }
+}
+function verificaSeAcabouOsCards() {
+  if (listaDeNumerosAleatoriosJaSorteados.length == quantidadeDeCards){
+    alert("ACABARAM OS CARDS!")
+  }
+}
 document.addEventListener("drop", event => {
   // impedir a ação padrão (default) e assim permitir dropagem para elementos dragaveis)
   event.preventDefault();
-  console.log("id do target", event.target.id)
-  console.log("gabarito da dropagem", gabaritoDeDropagem[event.target.id])
-  console.log("id do dragged", dragged.id)
-  console.log("teste do if", dragged.id == gabaritoDeDropagem[event.target.id])
   //mover o elemento arrastado para o destino de soltar selecionado
   if (gerenciadorDeAreaDeEspera.verificaSeCardVeioDaAreaDeEspera(dragged.id)) {// se o gerenciador... verificar que o card veio da 'área de espera' neste caso apareça no console 'VEIO'
     gerenciadorDeAreaDeEspera.removeCardDaAreaDeEspera(dragged.id)
   }
-  else {
-    console.log("NÃO VEIO")
-  }
+
   //*******FUNÇÕES QUE ACONTECEM NO DROP *******/
 
   if (dragged.id == gabaritoDeDropagem[event.target.id]) {//se o elemento arrastado corresponder (seu id) a algum constante do gabarito de dropagem
     dragged.parentNode.removeChild(dragged);
     event.target.style.opacity = "0"
     dragged.style.opacity = "1";
-    // console.log ('Está correto')
+    quantidadeDeCardsEncaixadosCorretamente++
+    console.log ('Quantidade de cards corretos', quantidadeDeCardsEncaixadosCorretamente)
+    verificaFimDeJogo()
   }
   else {
     dragged.style.display = "none"
@@ -92,6 +100,16 @@ document.addEventListener("drop", event => {
     // console.log ('Não está correto')
   }
 });
-
-
+// realizaAcoesAoDropar(){
+//   this.verificaSeJogoFoiFinalizado()
+// }
+// verificaSeJogoFoiFinalizado(){
+//   if (this.isJogoFinalizado()) {
+//     // alert('JOGO FINALIZADO');
+//     document.getElementById("jogo-finalizado").style.display = "block"
+//     document.getElementById("game-over").style.display = "block"
+//     document.getElementById("jogo-em-andamento").style.display = "none"
+//     this.cronometro.pararCronometro()
+//   }
+// }
 
