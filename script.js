@@ -62,18 +62,22 @@ document.getElementById('dispensercards').addEventListener("click", event => {
     sorteiaCardDaVez();
   }
   else {
-    alert("LIBERA AREA DE ESPERA")
+    alert("LIBERE ESPAÇO NA ÁREA DE ESPERA ANTES DE DESPENSAR OUTRA PEÇA")
   }
 });
 
 function verificaFimDeJogo() {
     if (quantidadeDeCardsEncaixadosCorretamente == quantidadeDeCards){
-      alert("PARABENS VOCÊ GANHOU!")
+        // alert("PARABENS VOCÊ GANHOU!")
+        document.getElementById("dispensercards").style.display = "none"
+        document.getElementById("jogo-finalizado").style.display = "block"
+        this.cronometro.pararCronometro()
     }
 }
 function verificaSeAcabouOsCards() {
   if (listaDeNumerosAleatoriosJaSorteados.length == quantidadeDeCards){
-    alert("ACABARAM OS CARDS!")
+    // alert("ACABARAM OS CARDS!")
+    document.getElementById("dispensercards").style.opacity = "0.2"
   }
 }
 document.addEventListener("drop", event => {
@@ -100,16 +104,5 @@ document.addEventListener("drop", event => {
     // console.log ('Não está correto')
   }
 });
-// realizaAcoesAoDropar(){
-//   this.verificaSeJogoFoiFinalizado()
-// }
-// verificaSeJogoFoiFinalizado(){
-//   if (this.isJogoFinalizado()) {
-//     // alert('JOGO FINALIZADO');
-//     document.getElementById("jogo-finalizado").style.display = "block"
-//     document.getElementById("game-over").style.display = "block"
-//     document.getElementById("jogo-em-andamento").style.display = "none"
-//     this.cronometro.pararCronometro()
-//   }
-// }
+
 

@@ -4,7 +4,6 @@
             this.segundos = 0
             this.minutos = 0
             this.isCronometroAtivo = false
-            // this.cronometro = cronometro;
     }
     atualizaCronometro() {
         // console.log('atualizando cronometro')
@@ -25,19 +24,10 @@
         }
     }
     pararCronometro(){
-        this.isCronometroAtivo=false
+        this.isCronometroAtivo = false
     }
     iniciaCronometro(){
-        this.isCronometroAtivo=true
-        console.log('iniciaCronometro')
+        this.isCronometroAtivo = true
+        // console.log('iniciaCronometro')
     }
-    // isMenorTrinta() {
-    //     return this.minutos <= 30
-    // }
-    // isDeTrintaAQuarenta() {
-    //     return this.minutos <=40
-    // }
-    // isDeQuarentaACinquenta() {
-    //     return this.minutos <=50
-    // }
 }
