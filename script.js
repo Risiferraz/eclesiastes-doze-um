@@ -71,12 +71,12 @@ function verificaFimDeJogo() {
         // alert("PARABENS VOCÊ GANHOU!")
         document.getElementById("dispensercards").style.display = "none"
         document.getElementById("jogo-finalizado").style.display = "block"
-        this.cronometro.pararCronometro()
+        cronometro.pararCronometro()
     }
 }
 function verificaSeAcabouOsCards() {
   if (listaDeNumerosAleatoriosJaSorteados.length == quantidadeDeCards){
-    // alert("ACABARAM OS CARDS!")
+    alert("ACABARAM OS CARDS!")
     document.getElementById("dispensercards").style.opacity = "0.2"
   }
 }
