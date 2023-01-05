@@ -75,8 +75,8 @@ function verificaFimDeJogo() {
     }
 }
 function verificaSeAcabouOsCards() {
-  if (listaDeNumerosAleatoriosJaSorteados.length == quantidadeDeCards){
-    alert("ACABARAM OS CARDS!")
+  if (listaDeNumerosAleatoriosJaSorteados.length == (quantidadeDeCards - 1)){
+    // alert("ACABARAM OS CARDS!")
     document.getElementById("dispensercards").style.opacity = "0.2"
   }
 }
