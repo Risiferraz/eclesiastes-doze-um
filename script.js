@@ -4,6 +4,8 @@ const cronometro = new Cronometro()
 setInterval(() => {
   cronometro.atualizaCronometro()
 }, 1000);
+let isCardAparenteNoDispenserCards = true
+const botaoDispenserCards = new BotaoDispenserCards("dispensercards")
 //********LISTA DA ÁREA DE ESPERA******** */
 const gerenciadorDeAreaDeEspera = new GerenciadorDeAreaDeEspera()
 let quantidadeDeCardsEncaixadosCorretamente = 0
@@ -22,6 +24,7 @@ function clicar() {
   document.getElementById("jogo-em-andamento").style.display = "grid"
   cronometro.iniciaCronometro()
   sorteiaCardDaVez()
+  botaoDispenserCards.bloqueiaBotao()
 }
 function sorteiaCardDaVez() {
   const numeroAleatorio = Math.floor(Math.random() * listaDeCardsNaoSorteados.length)
@@ -57,25 +60,28 @@ document.addEventListener("dragover", event => {
 
 document.getElementById('dispensercards').addEventListener("click", event => {
   event.preventDefault();
-  verificaSeAcabouOsCards();
-  if (gerenciadorDeAreaDeEspera.verificaSeTemAreaDisponivel()) {
-    sorteiaCardDaVez();
-  }
-  else {
-    alert("LIBERE ESPAÇO NA ÁREA DE ESPERA ANTES DE DESPENSAR OUTRA PEÇA")
+  if (botaoDispenserCards.habilitado) {
+    botaoDispenserCards.bloqueiaBotao()
+    verificaSeAcabouOsCards();
+    if (gerenciadorDeAreaDeEspera.verificaSeTemAreaDisponivel()) {
+      sorteiaCardDaVez();
+    }
+    else {
+      alert("LIBERE ESPAÇO NA ÁREA DE ESPERA ANTES DE DESPENSAR OUTRA PEÇA")
+    }
   }
 });
 
 function verificaFimDeJogo() {
-    if (quantidadeDeCardsEncaixadosCorretamente == quantidadeDeCards){
-        // alert("PARABENS VOCÊ GANHOU!")
-        document.getElementById("dispensercards").style.display = "none"
-        document.getElementById("jogo-finalizado").style.display = "block"
-        cronometro.pararCronometro()
-    }
+  if (quantidadeDeCardsEncaixadosCorretamente == quantidadeDeCards) {
+    // alert("PARABENS VOCÊ GANHOU!")
+    document.getElementById("dispensercards").style.display = "none"
+    document.getElementById("jogo-finalizado").style.display = "block"
+    cronometro.pararCronometro()
+  }
 }
 function verificaSeAcabouOsCards() {
-  if (listaDeNumerosAleatoriosJaSorteados.length == (quantidadeDeCards - 1)){
+  if (listaDeNumerosAleatoriosJaSorteados.length == (quantidadeDeCards - 1)) {
     // alert("ACABARAM OS CARDS!")
     document.getElementById("dispensercards").style.opacity = "0.2"
   }
@@ -83,6 +89,9 @@ function verificaSeAcabouOsCards() {
 document.addEventListener("drop", event => {
   // impedir a ação padrão (default) e assim permitir dropagem para elementos dragaveis)
   event.preventDefault();
+  if (listaDeNumerosAleatoriosJaSorteados.length != quantidadeDeCards) {
+    botaoDispenserCards.habilitaBotao()
+  }
   //mover o elemento arrastado para o destino de soltar selecionado
   if (gerenciadorDeAreaDeEspera.verificaSeCardVeioDaAreaDeEspera(dragged.id)) {// se o gerenciador... verificar que o card veio da 'área de espera' neste caso apareça no console 'VEIO'
     gerenciadorDeAreaDeEspera.removeCardDaAreaDeEspera(dragged.id)
@@ -95,7 +104,7 @@ document.addEventListener("drop", event => {
     event.target.style.opacity = "0"
     dragged.style.opacity = "1";
     quantidadeDeCardsEncaixadosCorretamente++
-    console.log ('Quantidade de cards corretos', quantidadeDeCardsEncaixadosCorretamente)
+    console.log('Quantidade de cards corretos', quantidadeDeCardsEncaixadosCorretamente)
     verificaFimDeJogo()
   }
   else {
