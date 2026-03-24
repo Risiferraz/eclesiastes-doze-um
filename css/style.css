@@ -1,38 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-body {
-    background-color: rgb(182, 114, 13);
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    background-color: rgb(33, 33, 33);
-    margin: 0 auto;
-    /* width: 95%; */
-    max-width: 456px;
-    height: 800px;
     box-sizing: border-box;
 }
+
+body {
+    background-color: rgb(182, 114, 13);
+}
+
+/* 
+.container {
+    margin: 0 auto;
+    max-width: 712px;
+    height: 900px;
+} */
 
 /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
 
 #capa {
+    background-color: rgb(33, 33, 33);
     display: grid;
-    width: 95%;
-    max-width: 456px;
-    height: 800px;
-    box-sizing: border-box;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    width: 600px;
+    height: 100vh;
+    max-height: 900px;
+    grid-template-rows: 50% 35% 15%;
     margin: 0 auto;
 }
 
 #titulo {
     grid-area: 1 / 1 / span 1 / span 2;
-    padding: 4%;
+    padding: 6% 0 0 0;
 }
 
 #logo {
@@ -43,8 +40,7 @@ body {
 #orientacoes {
     grid-area: 2 / 1 / span 1 / span 2;
     text-align: justify;
-    text-justify: inter-word;
-    padding: 6%;
+    padding: 2% 6% 0 6%;
 }
 
 #avancar {
@@ -54,8 +50,9 @@ body {
 
 h2 {
     color: antiquewhite;
-    margin-left: 4%;
-    font-size: 1.2em;
+    padding: 2% 6% 0 6%;
+    font-size: 1.4rem;
+    line-height: 2.7rem;
 }
 
 h5 {
@@ -66,10 +63,10 @@ h5 {
 
 p {
     color: antiquewhite;
-    margin-left: 4%;
-    line-height: 1.2em;
-    font-size: 1.1em;
     font-family: "Palatino Linotype", Verdana, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    padding: 0 6%;
 }
 
 #clique {
@@ -96,20 +93,20 @@ p {
 /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
 
 #tela-inicial {
+    background-color: rgb(33, 33, 33);
     display: none;
-    margin: 0 auto;
-    width: 95%;
-    max-width: 450px;
-    height: 800px;
+    width: 600px;
+    height: 100vh;
+    max-height: 900px;
     position: relative;
+    margin: 0 auto;
+    padding: 5% 0;
 }
 
 #modelo {
     display: block;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 5%;
+    width: 90%;
+    margin: 5% auto 0 auto;
 }
 
 #start {
@@ -121,10 +118,9 @@ p {
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     left: 50%;
-    margin-left: -100px;
-    margin-top: -35px;
+    transform: translate(-50%);
 }
 
 #start:hover {
@@ -137,13 +133,29 @@ p {
 
 #jogo-em-andamento {
     display: none;
-    position: relative;
     background-color: rgb(33, 33, 33);
-    max-width: 456px;
-    height: 800px;
-    box-sizing: border-box;
-    grid-template-rows: 456px 344px;
+    position: relative;
+    width: 600px;
+    height: 100vh;
+    max-height: 900px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 35% 15%;
+    margin: 0 auto;
     z-index: 1;
+}
+
+.malha {
+    grid-area: 1 / 1 / 2 / 2;
+    background-image: url("/imagens/pano-de-fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    margin: 24px auto 0 auto;
+    width: 408px;
+    height: 432px;
+    grid-template-columns: repeat(17, 24px);
+    grid-template-rows: repeat(18, 24px);
+    display: grid;
 }
 
 #Q1 {
@@ -307,124 +319,116 @@ p {
     border: 2px solid rgb(120, 120, 120, 0.5);
 }
 
-.malha {
-    grid-area: 1 / 1 / span 1 / span 3;
-    background-image: url("/imagens/pano-de-fundo.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    box-sizing: border-box;
-    margin: 24px 24px 0px 24px;
-    display: grid;
-    width: 408px;
-    grid-template-columns: repeat(17, 24px);
-    grid-template-rows: repeat(18, 24px);
-    z-index: 2;
-}
-
 .dropzone {
     opacity: 1;
     position: relative;
     z-index: 3;
 }
 
-#area-inferior {
+#area-de-espera {
+    grid-area: 2;
     display: grid;
-    grid-template-rows: 244px 100px;
-    grid-template-columns: 100px 250px 100px;
-}
-#area-de-espera{
-    display: grid;
-    position: relative;
-    background-color: rgb(33, 33, 33);
-    grid-area: 1 / 1 / span 1 / span 3;
     grid-template-columns: auto auto 116px;
     grid-template-rows: 1fr 1fr;
+    margin: 5%;
+    background-color: rgb(39, 39, 39);
 }
-#P5{
+
+#P5 {
     grid-area: 1 / 3 / span 2 / span 1;
     /* opacity: 50%; */
 }
 
-#dispensercards{
-    grid-area: 2 / 1 / span 1 / span 1;
+.espaco-de-espera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#area-inferior {
+    grid-area: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+#dispensercards {
+    grid-column: 1;
+    grid-row: 1;
     background-color: rgb(182, 114, 13);
     font-family: Impact, Verdana Bold, 'Arial Narrow', Arial;
-    margin-left: 21px;
     width: 79px;
     height: 79px;
     border-radius: 8px;
     border: solid 4px rgb(156, 147, 147);
-    margin-bottom: auto;
-    margin-top: auto;
 }
+
 .containerpecas {
-    grid-area: 2 / 2 / span 1 / span 1;
+    grid-column: 2;
+    grid-row: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 0%;
-    background-color: rgb(33, 33, 33);
-    box-sizing: border-box;
     position: relative;
 }
+
 .card {
     position: absolute;
     display: none;
     z-index: 10;
 }
+
 .card:hover {
     cursor: pointer;
 }
+
 .card-drop {
     position: relative;
     margin-top: 10px;
 }
+
 #antes {
     width: 96px;
     height: 48px;
     position: absolute;
 }
+
 #dias {
     width: 96px;
     height: 72px;
     position: absolute;
 }
+
 #neles {
     width: 96px;
     height: 48px;
     position: absolute;
 }
+
 #dizer {
     width: 96px;
     height: 72px;
     position: absolute;
 }
+
 #lembra-te {
     width: 216px;
     height: 72px;
     position: absolute;
 }
-.P {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 10%;
-}
-#Marcatempo {
+
+#marcatempo {
+    grid-column: 3;
+    grid-row: 1;
     background-color: rgb(182, 114, 13);
-    box-sizing: border-box;
     width: 76px;
     height: 76px;
-    margin-right: 21px;
+    margin-right: 0;
     padding: 5%;
     border-radius: 8px;
     border: solid 4px rgb(156, 147, 147);
-    grid-area: 2 / 3 / span 1 / span 1;
-    margin-bottom: auto;
-    margin-top: auto;
     z-index: 10;
 }
 
@@ -434,17 +438,22 @@ p {
     text-align: center;
     line-height: 2rem;
 }
-#jogo-finalizado{
+
+#jogo-finalizado {
     display: none;
-    position: relative;
+    position: fixed;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
+
 #game-over {
     width: 450px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    grid-area: 2 / 1 / span 2 / span 3;
+    display: block;
+    position: relative;
 }
+
 #pontuacao-final {
     background-color: rgb(182, 114, 13);
     font-family: Impact, Verdana Bold, 'Arial Narrow', Arial;

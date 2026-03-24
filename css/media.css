@@ -132,17 +132,14 @@
         scale: 80%;
     }
 
-    #Marcatempo {
+    #marcatempo {
         scale: 80%;
+        margin-right: 10px;
     }
 
     #dispensercards {
         scale: 90%;
         margin-left: 10px;
-    }
-
-    #Marcatempo {
-        margin-right: 10px;
     }
 }
 
@@ -193,7 +190,7 @@
         scale: 80%;
     }
 
-    #Marcatempo {
+    #marcatempo {
         scale: 80%;
     }
 
@@ -268,10 +265,9 @@
     }
 
     #start {
-        bottom: 40%;
-        left: 158%;
-        margin-left: -100px;
-        margin-top: -35px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
@@ -312,7 +308,7 @@
         /* background-color: blue; */
     }
 
-    #Marcatempo {
+    #marcatempo {
         grid-area: 2 / 4 / span 1 / span 1;
         padding: 2%;
         position: relative;
@@ -386,8 +382,9 @@
     }
 
     #start {
-        bottom: 40%;
-        left: 77%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
@@ -426,7 +423,7 @@
         /* background-color: rosybrown; */
     }
 
-    #Marcatempo {
+    #marcatempo {
         grid-area: 2 / 4 / span 1 / span 1;
         align-self: center;
         width: 55px;
@@ -473,9 +470,8 @@
     }
 
     #start {
-        bottom: 40%;
-        left: 82%;
-        margin-left: -100px;
-        margin-top: -35px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
