@@ -10,8 +10,6 @@ class AreaDeEspera {
         cardDropado.style.display="block"
         this.disponivel=false//quando a area de espera recebe o card fica indisponível (false)
         this.cardDropadoId=cardDropado.id
-        // this.elemento.style.backgroundColor = "yellow";
-        console.log(`${this.id} - ${this.disponivel} - ${this.cardDropadoId}`)
     }
     removeCard(){
         this.disponivel=true

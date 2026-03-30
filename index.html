@@ -6,7 +6,7 @@
     <title>Quebra-cabeça Eclesiastes 12:1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="/css/media.css" /> -->
+    <link rel="stylesheet" type="text/css" href="/css/media.css" />
 </head>
 
 <body>
@@ -111,19 +111,33 @@
                 <h5>TEMPO:</h5>
                 <h2 id="cronometro">00:00</h2>
             </div>
+            <div id="marcapontuacao">
+                <h5>PONTOS:</h5>
+                <h2 id="indicador"></h2>
+            </div>
         </div>
     </div>
     <!-- -X-X-X-X-X- 4a PÁGINA -X-X-X-X- -->
 
     <div id="jogo-finalizado">
-        <img src="/imagens/gameover.png" id="game-over">
+        <img src="/imagens/gameover2.png" id="game-over">
         <!-- <input type="text" class="form-control" id="pontuacao-final" readonly>          -->
+    </div>
+    <!-- MENSAGEM DE ORIENTAÇÃO LANDSCAPE -->
+    <div id="landscape-warning">
+        <div id="landscape-warning-content">
+            <h2>⚠️ Atenção!</h2>
+            <p>Para uma melhor experiência, <strong>gire seu dispositivo</strong> para a posição vertical (portrait).
+            </p>
+            <div id="rotate-icon">📱 ↻</div>
+        </div>
     </div>
     <!-- </div> -->
     <script src="js/areaDeEspera.js"></script>
     <script src="js/gerenciadorDeAreaDeEspera.js"></script>
     <script src="js/botaoDispenserCards.js"></script>
     <script src="js/cronometro.js"></script>
+    <script src="js/pontuacao.js"></script>
     <script src="js/scriptrandom.js"></script>
     <script src="js/drop.js"></script>
     <script src="js/script.js"></script>

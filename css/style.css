@@ -349,7 +349,7 @@ p {
 #area-inferior {
     grid-area: 3;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     align-items: center;
     justify-items: center;
 }
@@ -372,6 +372,9 @@ p {
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
+    height: 76px;
+    background-color: rgb(39, 39, 39);
 }
 
 .card {
@@ -420,7 +423,7 @@ p {
 }
 
 #marcatempo {
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 1;
     background-color: rgb(182, 114, 13);
     width: 76px;
@@ -439,11 +442,31 @@ p {
     line-height: 2rem;
 }
 
+#marcapontuacao {
+    grid-column: 3;
+    grid-row: 1;
+    background-color: rgb(182, 114, 13);
+    width: 76px;
+    height: 76px;
+    margin-right: 0;
+    padding: 5%;
+    border-radius: 8px;
+    border: solid 4px rgb(156, 147, 147);
+    z-index: 10;
+}
+
+#indicador {
+    font-size: 20px;
+    font-family: Impact, Verdana Bold, 'Arial Narrow', Arial;
+    text-align: center;
+    line-height: 2rem;
+}
+
 #jogo-finalizado {
     display: none;
     position: fixed;
     left: 50%;
-    bottom: 15%;
+    bottom: 6%;
     transform: translateX(-50%);
     z-index: 10;
 }
@@ -465,4 +488,8 @@ p {
     border: solid 4px rgb(156, 147, 147);
     margin-bottom: auto;
     margin-top: auto;
+}
+
+#landscape-warning {
+    display: none;
 }

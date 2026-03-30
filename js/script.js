@@ -14,6 +14,7 @@ function passar() {
   document.getElementById("capa").style.display = "none"
   document.getElementById("tela-inicial").style.display = "block"
 }
+
 const listaDeCards = document.getElementsByClassName('card');
 const listaDeCardsNaoSorteados = Array.from(listaDeCards)
 const listaDeNumerosAleatoriosJaSorteados = []
@@ -22,6 +23,7 @@ const listaDeNumerosAleatoriosJaSorteados = []
 function clicar() {
   document.getElementById("tela-inicial").style.display = "none"
   document.getElementById("jogo-em-andamento").style.display = "grid"
+  pontuacao.resetaPontuacao()
   cronometro.iniciaCronometro()
   sorteiaCardDaVez()
   botaoDispenserCards.bloqueiaBotao()
@@ -74,18 +76,27 @@ document.getElementById('dispensercards').addEventListener("click", event => {
 
 function verificaFimDeJogo() {
   if (quantidadeDeCardsEncaixadosCorretamente == quantidadeDeCards) {
-    // alert("PARABENS VOCÊ GANHOU!")
     document.getElementById("dispensercards").style.display = "none"
+    document.getElementById("marcapontuacao").style.gridColumn = "1"
+    document.querySelectorAll(".containerpecas").forEach((container) => {
+      container.style.backgroundColor = "transparent"
+    })
+    document.getElementById("area-de-espera").style.backgroundColor = "transparent"
     document.getElementById("jogo-finalizado").style.display = "block"
     cronometro.pararCronometro()
+    const cronometroEl = document.getElementById('cronometro')
+    const textoCronometro = cronometroEl ? cronometroEl.textContent.trim() : '00:00'
+    pontuacao.aplicaPontuacaoFinalComTempo(textoCronometro)
   }
 }
+
 function verificaSeAcabouOsCards() {
   if (listaDeNumerosAleatoriosJaSorteados.length == (quantidadeDeCards - 1)) {
     // alert("ACABARAM OS CARDS!")
     document.getElementById("dispensercards").style.opacity = "0.2"
   }
 }
+
 document.addEventListener("drop", event => {
   // impedir a ação padrão (default) e assim permitir dropagem para elementos dragaveis)
   event.preventDefault();
@@ -104,11 +115,12 @@ document.addEventListener("drop", event => {
     event.target.style.opacity = "0"
     dragged.style.opacity = "1";
     quantidadeDeCardsEncaixadosCorretamente++
-    console.log('Quantidade de cards corretos', quantidadeDeCardsEncaixadosCorretamente)
+    pontuacao.adicionaPontuacao()
     verificaFimDeJogo()
   }
   else {
     dragged.style.display = "none"
+    pontuacao.removePontuacao(1)
     setTimeout(() => gerenciadorDeAreaDeEspera.incluiCardNaAreaDeEspera(dragged), 200)
     // console.log ('Não está correto')
   }

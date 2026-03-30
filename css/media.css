@@ -442,36 +442,67 @@
 }
 
 /* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
-/* ____________________________________________________________________________ */
-/* regras para orientation landscape e com altura de até 375 px*/
-@media (orientation: landscape) and (max-height: 375px) and (max-width: 700px) {
+/* -----------------------------------------------------------------------------*/
+/* MENSAGEM DE ORIENTAÇÃO LANDSCAPE - Oculta por padrão */
+/* #region */
 
-    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
-    #capa {
-        grid-template-columns: 48% 52%;
+@media screen and (orientation: landscape) and (max-height: 600px) {
+
+    #landscape-warning {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
-    #logo {
-        width: 320px;
+    #landscape-warning-content {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        color: white;
+        max-width: 90%;
+        width: fit-content;
+        margin: auto;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     }
 
-    #avancar {
-        scale: 75%;
+    #landscape-warning-content h2 {
+        margin: 0 0 15px 0;
+        font-size: 28px;
+        font-weight: bold;
     }
 
-    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
-
-    #tela-inicial {
-        margin: 0;
+    #landscape-warning-content p {
+        margin: 15px 0;
+        font-size: 18px;
+        line-height: 1.5;
     }
 
-    #modelo {
-        width: 60%;
+    #rotate-icon {
+        font-size: 48px;
+        margin-top: 20px;
+        animation: rotateAnimation 2s infinite;
     }
 
-    #start {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    @keyframes rotateAnimation {
+
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(90deg);
+        }
     }
 }
