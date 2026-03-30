@@ -43,6 +43,9 @@ let dragged = null;
 
 document.addEventListener("dragend", event => {
   dragged = event.target;
+  if (dragged) {
+    dragged.style.opacity = "1";
+  }
   // sorteiaCardDaVez()
 });
 const rotateCard = "rotate(270deg)";
@@ -51,8 +54,17 @@ const listaDeIdsParaRotacionar = [
 ]
 document.addEventListener("dragstart", event => {
   dragged = event.target;
+  // Esconde o card real após criar a imagem fantasma do navegador.
+  setTimeout(() => {
+    if (dragged) {
+      dragged.style.opacity = "0";
+    }
+  }, 0);
+
   if (listaDeIdsParaRotacionar.includes(dragged.id)) {//Se a lista de ids inclui o id do card em questão (dragged)
-    dragged.style.transform = rotateCard;//a constante 'dragged' faz referência ao objeto que enviou o evento (linha 39) e aplica o estilo transform que recebe a contante 'rotate 90"
+    const escalaMobile = window.matchMedia('(max-width: 375px)').matches ? ' scale(0.875)' : '';
+    const transformFinal = `${rotateCard}${escalaMobile}`;
+    dragged.style.setProperty('transform', transformFinal, 'important');
   }
 });
 

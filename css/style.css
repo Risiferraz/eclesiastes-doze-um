@@ -106,13 +106,13 @@ p {
     max-height: 900px;
     position: relative;
     margin: 0 auto;
-    padding: 5% 0;
+    padding: 2% 0;
 }
 
 #modelo {
     display: block;
     width: 90%;
-    margin: 5% auto 0 auto;
+    margin: 0 auto;
 }
 
 #start {
@@ -124,7 +124,7 @@ p {
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translate(-50%);
 }
