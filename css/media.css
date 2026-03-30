@@ -1,452 +1,127 @@
-/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
-/* regras para uma largura ENTRE 391 a 428px */
+/* 1) - COR VERDE - TELAS COM ALTURA MENOR OU IGUAL A 799PX */
 
-@media (max-width:428px) {
-    .container {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-    }
-
-    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
+@media screen and (max-height: 799px) {
     #capa {
-        width: 100vw;
-        height: 100vh;
-        grid-template-columns: 50vw 50vw;
-        grid-template-rows: 43vh 37vh 20vh;
+        background-color: green;
+        grid-template-rows: 45% 35% 20%;
+        width: 550px;
     }
 
     #titulo {
-        padding: 10% 2%;
-    }
-
-    #logo {
-        width: 400px;
-        height: 320px;
-        object-fit: contain;
-    }
-
-    h2 {
-        margin-bottom: 5%;
-    }
-
-    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
-
-    #tela-inicial {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-    }
-
-    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
-
-    #jogo-em-andamento {
-        width: 100%;
-        grid-template-rows: 52% 48% auto;
-        grid-template-columns: 23% 54% 23%;
-    }
-
-    .malha {
-        margin: 24px 5% 0px 5%;
-        width: 90%;
-        grid-template-columns: repeat(17, auto);
-        grid-template-rows: repeat(18, auto);
-    }
-
-    .dropzone {
-        opacity: 0.7;
-    }
-
-    #dispensercards {
-        scale: 90%;
-    }
-}
-
-/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
-/* regras para uma largura máxima de 390px */
-
-@media (max-width:390px) {
-
-    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
-    #capa {
-        width: 100%;
-        grid-template-columns: 50vw 50vw;
-        grid-template-rows: 44vh 35vh auto;
-    }
-
-    #titulo {
-        padding: 3% 2%;
-    }
-
-    #logo {
-        width: 350px;
-        height: 280px;
-        object-fit: contain;
-    }
-
-    h2 {
-        margin: 0;
+        padding: 2% 12% 0 12%;
     }
 
     p {
-        margin: 3%;
-        line-height: 1.1em;
-        font-size: 0.9em;
+        line-height: 1.2rem;
+        font-size: 1rem;
+        font-style: italic;
+        padding: 0 15%;
     }
-
-    #orientacoes {
-        padding: 0 3%;
-        line-height: 3em;
-        font-size: 1.1em;
-    }
-
-    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
-
-    #tela-inicial {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-
-    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
-
-    #jogo-em-andamento {
-        width: 100%;
-        grid-template-rows: 363px 39% auto;
-        grid-template-columns: 25% auto 25%;
-        height: 100vh;
-    }
-
-    .malha {
-        margin: 20px 5% 0px 5%;
-        width: 90%;
-        grid-template-columns: repeat(17, auto);
-        grid-template-rows: repeat(18, auto);
-    }
-
-    .dropzone {
-        opacity: 0.7;
-    }
-
-    .card {
-        scale: 80%;
-    }
-
-    #marcatempo {
-        scale: 80%;
-        margin-right: 10px;
-    }
-
-    #dispensercards {
-        scale: 90%;
-        margin-left: 10px;
-    }
-}
-
-/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
-/* regras para orientation: portrait e altura de até 668px*/
-
-@media (orientation: portrait) and (max-height:668px) {
 
     h2 {
-        font-size: 1em;
-        margin: 1% 3%;
-        line-height: 2em;
+        line-height: 2rem;
     }
 
-    p {
-        margin: 0 3%;
-        line-height: 1.3em;
-        font-size: 0.8em;
-    }
-
+    /* 
     #avancar {
-        scale: 80%;
-        top: 20%;
-    }
-    #capa {
-        height: 98vh;
-    }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
 
-    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
-
-    #jogo-em-andamento {
-        grid-template-rows: 54% 31% auto;
-        grid-template-columns: 26% auto 23%;
-        height: 100vh;
-    }
-
-    .malha {
-        margin: 0 5% 0px;
-        grid-template-columns: repeat(17, auto);
-        grid-template-rows: repeat(18, auto);
-    }
-
-    .dropzone {
-        opacity: 0.7;
-    }
-
-    .card {
-        scale: 80%;
-    }
-
-    #marcatempo {
-        scale: 80%;
-    }
-
-    #dispensercards {
-        scale: 90%;
-    }
-}
-
-/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
-/* ____________________________________________________________________________ */
-/* regras para orientation landscape - com altura de 376 até 428px*/
-
-@media (orientation: landscape) and (max-height: 428px) {
-
-    .container {
-        width: 100vw;
-        height: 100vh;
-        max-width: 100vw;
-    }
-
-    #capa {
-        width: 100vw;
-        height: 100vh;
-        max-width: 800px;
-        grid-template-columns: 2fr 1.8fr;
-        grid-template-rows: 2fr 1fr;
-    }
-
-    #titulo {
-        grid-area: 1 / 1 / span 2 / span 1;
-        padding: 3%;
-    }
-
-    #logo {
-        width: 388px;
-        object-fit: contain;
-    }
-
-    #orientacoes {
-        grid-area: 1 / 2 / span 1 / span 1;
-        text-align: justify;
-        text-justify: inter-word;
-        padding: 4%;
-    }
-
-    h2 {
-        margin-bottom: 5%;
-    }
-
-    p {
-        margin: 3%;
-        line-height: 1.1em;
-        font-size: 0.9em;
-    }
-
-    #avancar {
-        grid-area: 2 / 2 / span 1 / span 1;
-    }
-
-    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
-
-    #tela-inicial {
-        height: 100vh;
-        max-width: 420px;
+    #btn {
+        position: static;
+        transform: none;
         margin: 0;
-    }
-
-    #modelo {
-        width: 100%;
-        height: 100vh;
-        padding-top: 0;
-    }
-
-    #start {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
-
-    #jogo-em-andamento {
-        width: 100%;
-        max-width: 100vw;
-        grid-template-columns: 48% 13% 29% 10%;
-        grid-template-rows: 3fr 1fr;
-        height: 100vh;
-    }
-
-    .malha {
-        grid-area: 1 / 1 / span 2 / span 1;
-        margin: 0;
-        width: 100%;
-        grid-template-columns: repeat(17, auto);
-        grid-template-rows: repeat(18, auto);
-    }
-
-    #area-de-espera {
-        grid-area: 1 / 2 / span 1 / span 3;
-        width: 100%;
-        /* background-color: darkorange; */
-    }
-
-    #dispensercards {
-        grid-area: 2 / 2 / span 1 / span 1;
-        margin-left: 21px;
-        width: 95px;
-        height: 90px;
-        z-index: 2;
-    }
-
-    .containerpecas {
-        grid-area: 2 / 3 / span 1 / span 1;
-        padding-top: 0%;
-        /* background-color: blue; */
-    }
-
-    #marcatempo {
-        grid-area: 2 / 4 / span 1 / span 1;
-        padding: 2%;
-        position: relative;
-    }
-}
-
-/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
-/* ____________________________________________________________________________ */
-/* regras para orientation landscape e com altura de até 375 px*/
-@media (orientation: landscape) and (max-height: 375px) {
-
-    /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
-
-    .container {
-        width: 100vw;
-        height: 100vh;
-        max-height: 100vh;
-    }
-
-    #capa {
-        width: 100vw;
-        height: 100vh;
-        grid-template-columns: 48% 52%;
-        grid-template-rows: 2fr 1fr;
-    }
-
-    #titulo {
-        grid-area: 1 / 1 / span 2 / span 1;
-        padding: 3%;
-    }
-
-    #logo {
-        width: 360px;
-    }
-
-    #orientacoes {
-        text-align: justify;
-        text-justify: inter-word;
-        padding: 4%;
-    }
-
-    h2 {
-        margin-bottom: 5%;
-    }
-
-    p {
-        margin: 3%;
-        line-height: 1.1em;
-        font-size: 0.9em;
-    }
-
-    #avancar {
-        scale: 100%;
-        top: 0%;
-    }
-
-    /* -X-X-X-X-X- 2a PÁGINA -X-X-X-X-*/
-
-    #tela-inicial {
-        margin: 0 auto;
-        max-width: 100vw;
-        height: 100vh;
-    }
-
-    #modelo {
-        width: 50%;
-        height: 100vh;
-        margin-left: 0;
-        margin-right: auto;
-        padding-top: 0;
-    }
-
-    #start {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    /* -X-X-X-X-X- 3a PÁGINA -X-X-X-X-*/
-
-    .card {
-        scale: 80%;
-    }
-
-    #jogo-em-andamento {
-        grid-template-columns: 48% 13% 29% 10%;
-        grid-template-rows: 3fr 1fr;
-    }
-
-    .malha {
-        grid-area: 1 / 1 / span 2 / span 1;
-    }
-
-    #area-de-espera {
-        grid-area: 1 / 2 / span 1 / span 3;
-        /* background-color: aliceblue; */
-    }
-
-    #dispensercards {
-        grid-area: 2 / 2 / span 1 / span 1;
-        align-self: center;
-        margin: auto;
         width: 80px;
-        height: 85px;
-        font-size: 9pt;
-        padding: 2%;
-    }
-
-    .containerpecas {
-        grid-area: 2 / 3 / span 1 / span 1;
-        position: relative;
-        /* background-color: rosybrown; */
-    }
-
-    #marcatempo {
-        grid-area: 2 / 4 / span 1 / span 1;
-        align-self: center;
-        width: 55px;
-        height: 60px;
-        padding: 1%;
-        left: 2%;
-    }
-    #cronometro {
-        font-size: 15px;
-        line-height: 1.5rem;
-    }
-    h5 {
-        font-size: 7pt;
-        margin-bottom: 8%;
+        height: 90px;
     }
 }
 
-/* X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X- */
-/* -----------------------------------------------------------------------------*/
-/* MENSAGEM DE ORIENTAÇÃO LANDSCAPE - Oculta por padrão */
-/* #region */
+/* 2) - COR VERMELHO - TELAS COM ALTURA MENOR OU IGUAL A 620PX */
 
-@media screen and (orientation: landscape) and (max-height: 600px) {
+@media screen and (max-height: 620px) {
+    #capa {
+        background-color: red;
+        grid-template-rows: 43% 35% 22%;
+        width: 500px;
+    }
+
+    #titulo {
+        padding: 2% 20% 0 20%;
+    }
+
+    h2 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        padding: 0% 6% 0 4%;
+    }
+
+    p {
+        font-size: 0.9rem;
+        padding: 0 4%;
+    }
+
+    #btn {
+        width: 57px;
+        height: 60px;
+    }
+}
+
+/* 3) - COR AZUL - TELAS COM  LARGURA DE 376PX A 414PX */
+
+@media screen and (max-width: 414px) {
+    #capa {
+        background-color: blue;
+        grid-template-rows: 40% 40% 20%;
+        width: 100%;
+    }
+
+    #titulo {
+        padding: 6% 0 3% 0;
+    }
+
+    p {
+        line-height: 1.4rem;
+        font-size: 1.1rem;
+        font-style: italic;
+        padding: 0 7%;
+    }
+
+}
+
+/* 4) - COR AZUL - TELAS COM  LARGURA DE Até 375PX */
+
+@media screen and (max-width: 375px) {
+    #capa {
+        background-color: rosybrown;
+        grid-template-rows: 40% 37% 23%;
+    }
+
+    #titulo {
+        padding: 2% 0 0% 0;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        line-height: 1.2rem;
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+
+    #btn {
+        width: 60px;
+        height: 70px;
+    }
+}
+
+/* -----------------------------------------------------------------------------*/
+/* TELAS COM ORIENTAÇÃO LANDSCAPE E ALTURA MENOR OU IGUAL A 460PX */
+
+@media screen and (orientation: landscape) and (max-height: 460px) {
 
     #landscape-warning {
         display: flex !important;

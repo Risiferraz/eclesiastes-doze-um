@@ -8,12 +8,17 @@ body {
     background-color: rgb(182, 114, 13);
 }
 
-/* 
-.container {
-    margin: 0 auto;
-    max-width: 712px;
-    height: 900px;
-} */
+
+.stage  {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    overflow: hidden;
+    height: 100vh;
+    max-height: 100vh;
+}
 
 /* -X-X-X-X-X- 1a PÁGINA -X-X-X-X-*/
 
@@ -46,6 +51,9 @@ body {
 #avancar {
     grid-area: 3 / 1 / span 1 / span 2;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h2 {
@@ -81,9 +89,7 @@ p {
     background-color: rgb(33, 33, 33);
     border-radius: 85px;
     border-color: rgb(33, 33, 33);
-    position: absolute;
-    left: 50%;
-    margin-left: -46px;
+    position: static;
 }
 
 #btn:hover {
