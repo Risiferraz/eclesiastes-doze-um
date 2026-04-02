@@ -8,8 +8,7 @@ body {
     background-color: rgb(182, 114, 13);
 }
 
-
-.stage  {
+.stage {
     position: fixed;
     inset: 0;
     display: grid;
@@ -148,6 +147,24 @@ p {
     grid-template-rows: 50% 35% 15%;
     margin: 0 auto;
     z-index: 1;
+}
+
+#preview-final {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgb(182, 114, 13);
+    color: antiquewhite;
+    font-family: Impact, Verdana Bold, 'Arial Narrow', Arial;
+    font-size: 14px;
+    padding: 10px 12px;
+    border: solid 3px rgb(156, 147, 147);
+    border-radius: 8px;
+    z-index: 20;
+}
+
+#preview-final:hover {
+    cursor: pointer;
 }
 
 .malha {
@@ -432,6 +449,10 @@ p {
     grid-column: 4;
     grid-row: 1;
     background-color: rgb(182, 114, 13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 76px;
     height: 76px;
     margin-right: 0;
@@ -446,12 +467,19 @@ p {
     font-family: Impact, Verdana Bold, 'Arial Narrow', Arial;
     text-align: center;
     line-height: 2rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #marcapontuacao {
     grid-column: 3;
     grid-row: 1;
     background-color: rgb(182, 114, 13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 76px;
     height: 76px;
     margin-right: 0;
@@ -466,13 +494,22 @@ p {
     font-family: Impact, Verdana Bold, 'Arial Narrow', Arial;
     text-align: center;
     line-height: 2rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#marcatempo h5,
+#marcapontuacao h5 {
+    margin: 0;
+    text-align: center;
 }
 
 #jogo-finalizado {
     display: none;
-    position: fixed;
+    position: absolute;
     left: 50%;
-    bottom: 6%;
+    bottom: 0;
     transform: translateX(-50%);
     z-index: 10;
 }
@@ -481,6 +518,8 @@ p {
     width: 450px;
     display: block;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #pontuacao-final {

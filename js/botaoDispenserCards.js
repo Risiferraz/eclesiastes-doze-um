@@ -9,7 +9,7 @@ class BotaoDispenserCards {
         this.habilitado = true
     }
     bloqueiaBotao() {
-        this.elemento.style.opacity = "0.2"
+        this.elemento.style.opacity = window.matchMedia('(max-width: 414px)').matches ? "0" : "0.2"
         this.habilitado = false
     }
 }
